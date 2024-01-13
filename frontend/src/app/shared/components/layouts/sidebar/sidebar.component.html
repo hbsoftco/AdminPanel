@@ -13,20 +13,27 @@
         </div>
         <div class="scrollbar-container h-[calc(100vh-80px)] relative ps ps--active-y">
             <div *ngFor="let menu of menus; let i = index" class="menu-container">
-                <div (click)="toggleMenu(i)" class="menu-title">
-                    {{ menu.title }}
+                <div (click)="toggleMenu(i)" class="menu-title flex justify-between items-center"
+                    [class.selected]="menu.isSelected">
+                    <div class="flex justify-left items-center">
+                        <img class="w-[1.1rem] h-[1.1rem] mr-1" [src]="menu.iconSrc" alt="Menu Icon">
+                        <span>{{ menu.title | translate }}</span>
+                    </div>
+                    <div *ngIf="menu.items.length > 0">
+                        <img class="w-[1.1rem] h-[1.1rem] mr-1"
+                            [src]="menu.isOpen ? '/assets/icons/chevron-line.svg' : '/assets/icons/chevron-line-down.svg'"
+                            alt="Menu Icon">
+                    </div>
                 </div>
                 <div *ngIf="menu.isOpen" class="menu-items" [@dropDownMenu]>
                     <ul>
-                        <li *ngFor="let item of menu.items" class="menu-item" (click)="toggleSubMenu(i)">
+                        <li *ngFor="let item of menu.items" class="menu-item">
                             {{ item }}
-                            <div *ngIf="menu.subMenuOpen">
-                                Submenu content for {{ item }}
-                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
+
         </div>
     </div>
 </nav>

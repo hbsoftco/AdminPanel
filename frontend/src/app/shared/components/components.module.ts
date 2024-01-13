@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TopNavComponent } from './layouts/top-nav/top-nav.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 const COMPONENTS = [TopNavComponent, SidebarComponent];
 
@@ -11,7 +12,8 @@ const COMPONENTS = [TopNavComponent, SidebarComponent];
     COMPONENTS
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TranslateModule
   ],
   exports: [
     COMPONENTS
