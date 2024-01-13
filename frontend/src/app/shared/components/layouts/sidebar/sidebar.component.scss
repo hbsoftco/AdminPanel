@@ -1,0 +1,36 @@
+/* app.component.css */
+
+.menu-container {
+    margin-bottom: 10px;
+}
+
+.menu-title {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.menu-title:hover {
+    background-color: #ddd;
+}
+
+.menu-items {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.menu-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items li {
+    padding: 5px;
+}
+
+.menu-items.active {
+    max-height: 1000px;
+    /* Set a value large enough to accommodate your menu items */
+    transition: max-height 0.3s ease;
+}

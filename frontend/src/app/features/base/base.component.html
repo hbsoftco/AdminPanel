@@ -1,9 +1,11 @@
-<div class="root grid grid-cols-12  mb-5 gap-6">
+<div class="navbar-static main-container text-black dark:text-white-dark min-h-screen">
     <div>
         <app-sidebar></app-sidebar>
     </div>
-    <div>
+    <div class="main-content flex flex-col min-h-screen">
         <app-top-nav></app-top-nav>
-        <router-outlet></router-outlet>
+        <div class="p-6">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
