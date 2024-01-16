@@ -1,36 +1,32 @@
-/* app.component.css */
-
 .menu-container {
-    margin-bottom: 10px;
-}
+    @apply w-full;
 
-.menu-title {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #eee;
-}
+    &_top-nav {
+        @apply text-secondray-300 ml-5 text-sm mt-3 font-bold;
+    }
 
-.menu-title:hover {
-    background-color: #ddd;
-}
+    &_item {
+        @apply flex justify-between items-center p-2.5 rounded-md m-2;
 
-.menu-items {
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
+        &--title {
+            @apply flex items-center;
 
-.menu-items ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+            .menu-icon {
+                @apply w-5 h-5 mr-2;
+            }
 
-.menu-items li {
-    padding: 5px;
-}
+            .menu-text {
+                @apply text-secondray-300 text-[0.9rem];
+            }
 
-.menu-items.active {
-    max-height: 1000px;
-    /* Set a value large enough to accommodate your menu items */
-    transition: max-height 0.3s ease;
+        }
+    }
+
+    .active-link {
+        @apply bg-primary-50 shadow-sm;
+
+        .menu-text {
+            @apply text-primary-700 font-bold;
+        }
+    }
 }

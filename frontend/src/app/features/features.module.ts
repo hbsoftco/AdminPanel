@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { FeaturesRoutingModule } from './features-routing.module';
+
 import { SharedModule } from '../shared/shared.module';
 
 import { BaseComponent } from './base/base.component';
@@ -12,6 +14,7 @@ import { BaseComponent } from './base/base.component';
     BaseComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     FeaturesRoutingModule,
     SharedModule
