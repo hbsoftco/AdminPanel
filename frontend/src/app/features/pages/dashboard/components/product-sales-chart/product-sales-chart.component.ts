@@ -20,17 +20,26 @@ export class ProductSalesChartComponent {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
       datasets: [
         {
-          label: 'My First dataset',
-          backgroundColor: documentStyle.getPropertyValue('--blue-500'),
-          borderColor: documentStyle.getPropertyValue('--blue-500'),
-          data: [65, 59, 80, 81, 56, 55, 40]
+          label: 'Gross margin',
+          backgroundColor: '#19a873',
+          borderColor: '#19a873',
+          data: [65, 59, 80, 81, 56, 55, 40, 59, 80, 81, 56, 88],
+          borderRadius: 6,
         },
         {
-          label: 'My Second dataset',
-          backgroundColor: documentStyle.getPropertyValue('--pink-500'),
-          borderColor: documentStyle.getPropertyValue('--pink-500'),
-          data: [28, 48, 40, 19, 86, 27, 90]
-        }
+          label: 'Revenue',
+          backgroundColor: '#718980',
+          borderColor: '#718980',
+          data: [28, 48, 40, 19, 86, 27, 90, 81, 56, 55, 40, 59],
+          borderRadius: 6,
+        },
+        {
+          label: 'Cost',
+          backgroundColor: '#117c63',
+          borderColor: '#117c63',
+          data: [68, 33, 50, 39, 46, 77, 10, 68, 33, 50, 39, 22],
+          borderRadius: 6,
+        },
       ]
     };
 
@@ -38,11 +47,16 @@ export class ProductSalesChartComponent {
       maintainAspectRatio: false,
       aspectRatio: 0.8,
       plugins: {
+        tooltips: {
+          displayColors: false,
+          yAlign: 'bottom',
+          backgroundColor: '#227799'
+        },
         legend: {
           labels: {
             color: textColor
           }
-        }
+        },
       },
       scales: {
         x: {
@@ -54,7 +68,7 @@ export class ProductSalesChartComponent {
           },
           grid: {
             color: surfaceBorder,
-            drawBorder: false
+            drawBorder: false,
           }
         },
         y: {
