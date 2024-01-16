@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-top-nav',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrl: './top-nav.component.scss'
 })
 export class TopNavComponent {
+  items: MenuItem[] | undefined;
+
+  ngOnInit() {
+    this.items = [
+      {
+        label: 'English',
+        icon: 'pi pi-search'
+      },
+      {
+        label: 'Spanish',
+        icon: 'pi pi-search'
+      },
+      {
+        label: 'German',
+        icon: 'pi pi-search'
+      },
+    ]
+  }
 
 }

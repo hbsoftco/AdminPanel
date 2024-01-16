@@ -1,22 +1,28 @@
-<!-- <header class="z-40">
-    <div class="shadow-sm">
-        <div class="relative bg-white flex w-full items-center px-5 py-2.5 dark:bg-black h-14">
-            <div class="horizontal-logo flex justify-between items-center ltr:mr-2 rtl:ml-2">
-                <div class="ltr:mr-2 rtl:ml-2 h-full flex justify-between items-center">
-                    <button>
-                        <img class="w-6 h-6 mr-1" src="/assets/icons/bars.svg" alt="Menu Icon">
-                    </button>
-                </div>
-                <div class="relative">
-                    <input type="text"
-                        class="ltr:pl-9 rtl:pr-9 ltr:sm:pr-4 rtl:sm:pl-4 ltr:pr-9 rtl:pl-9 py-[0.4rem] outline-none peer sm:bg-transparent bg-gray-100 border rounded-md"
-                        placeholder="Search...">
-                    <button type="button"
-                        class="absolute w-9 h-9 inset-0 ltr:right-auto rtl:left-auto appearance-none peer-focus:text-primary flex justify-center items-center">
-                        <img class="w-5 h-5" src="/assets/icons/search-line.svg" alt="Search Icon">
-                    </button>
-                </div>
+<header class="mx-4 bg-white rounded-b-lg p-4 mb-4 shadow-sm">
+    <div class="flex justify-between items-center">
+        <div class="relative">
+            <input type="text"
+                class="py-2.5 pl-10 text-sm outline-none font-normal bg-gray-100 border-none rounded-full"
+                placeholder="Search here ...">
+            <button type="button"
+                class="absolute w-9 h-9 inset-0 ltr:right-auto rtl:left-auto appearance-none peer-focus:text-primary flex justify-center items-center">
+                <img class="w-5 h-5 relative top-0.5 left-0.5" src="/assets/icons/search-line.svg" alt="Search Icon">
+            </button>
+        </div>
+        <div class="flex justify-between items-center">
+            <div>
+                <button (click)="menu.toggle($event)" #btn
+                    class="w-10 h-10 bg-gray-100 flex justify-center items-center rounded-full transition duration-200 hover:bg-gray-200">
+                    <img src="/assets/images/flags/usa.png" alt="country">
+                </button>
+                <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+            </div>
+            <div class="mx-2">
+                <button
+                    class="w-10 h-10 bg-gray-100 flex justify-center items-center rounded-full transition duration-200 hover:bg-gray-200">
+                    <img src="/assets/images/flags/usa.png" alt="country">
+                </button>
             </div>
         </div>
     </div>
-</header> -->
+</header>

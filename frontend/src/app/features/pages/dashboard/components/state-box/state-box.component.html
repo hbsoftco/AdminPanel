@@ -1,0 +1,18 @@
+<div class="p-5 rounded-lg bg-white shadow-sm hover:shadow-md transition duration-200">
+    <div class="flex justify-between">
+        <div class="">
+            <div class="text-secondray-400 mb-1">{{ title }}</div>
+            <h4 class="font-extrabold text-2xl text-primary-800">{{ value }}</h4>
+            <div class="flex items-center mt-5">
+                <p class="hb-badge mr-1" [ngClass]="state? 'bg-bgGreen text-green': 'bg-bgRed text-red'">
+                    {{ percentage }}
+                    <span>{{ state? '+' : '-' }}</span>
+                </p>
+                <p class="text-secondray-400 text-sm">Leads this month</p>
+            </div>
+        </div>
+        <div>
+            <img [src]="'/assets/icons/'+icon" alt="icon" class="w-11">
+        </div>
+    </div>
+</div>

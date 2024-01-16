@@ -11,7 +11,7 @@ import { BaseComponent } from './base/base.component';
 
 @NgModule({
   declarations: [
-    BaseComponent
+    BaseComponent,
   ],
   imports: [
     FormsModule,

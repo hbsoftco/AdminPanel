@@ -6,6 +6,9 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 
+import { ButtonModule } from 'primeng/button';
+import { TieredMenuModule } from 'primeng/tieredmenu';
+
 const COMPONENTS = [TopNavComponent, SidebarComponent];
 
 @NgModule({
@@ -13,6 +16,10 @@ const COMPONENTS = [TopNavComponent, SidebarComponent];
     COMPONENTS
   ],
   imports: [
+    // Prime NG
+    TieredMenuModule,
+    ButtonModule,
+
     RouterModule,
     CommonModule,
     TranslateModule

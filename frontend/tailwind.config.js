@@ -21,7 +21,11 @@ module.exports = {
         secondray: {
           '300': '#849891',
           '400': '#738b82',
-        }
+        },
+        green: "#00b69b",
+        bgGreen: "#00b69b1a",
+        red: "#ee368c",
+        bgRed:"#ee368c1a",
 
         // primary: "#20ab78",
 

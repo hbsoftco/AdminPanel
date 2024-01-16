@@ -1,33 +1,16 @@
-<p>dashboard works!
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-</p>
+<div class="mx-4 pb-4">
+    <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-12 xl:col-span-3">
+            <app-state-box [title]="'Total Orders'" [value]="'12432'" [percentage]="'4.87%'" [state]="true" icon="simcard-2.svg"></app-state-box>
+        </div>
+        <div class="col-span-12 xl:col-span-3">
+            <app-state-box [title]="'Overall Revenue'" [value]="'$28,452'" [percentage]="'0.50%'" [state]="false" icon="dollar-circle.svg"></app-state-box>
+        </div>
+        <div class="col-span-12 xl:col-span-3">
+            <app-state-box [title]="'Average Price'" [value]="'$200.5'" [percentage]="'2.22%'" [state]="false" icon="wallet-1.svg"></app-state-box>
+        </div>
+        <div class="col-span-12 xl:col-span-3">
+            <app-state-box [title]="'Total Clients'" [value]="'12432'" [percentage]="'4.87%'" [state]="true" icon="profile-tick.svg"></app-state-box>
+        </div>
+    </div>
+</div>
