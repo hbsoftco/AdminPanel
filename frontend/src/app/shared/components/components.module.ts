@@ -8,8 +8,10 @@ import { RouterModule } from '@angular/router';
 
 import { ButtonModule } from 'primeng/button';
 import { TieredMenuModule } from 'primeng/tieredmenu';
+import { ChartModule } from 'primeng/chart';
 
 const COMPONENTS = [TopNavComponent, SidebarComponent];
+const MODULES = [ChartModule];
 
 @NgModule({
   declarations: [
@@ -20,12 +22,15 @@ const COMPONENTS = [TopNavComponent, SidebarComponent];
     TieredMenuModule,
     ButtonModule,
 
+    MODULES,
+
     RouterModule,
     CommonModule,
     TranslateModule
   ],
   exports: [
-    COMPONENTS
+    COMPONENTS,
+    MODULES
   ]
 })
 export class ComponentsModule { }

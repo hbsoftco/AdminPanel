@@ -2,20 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
+
 import { DashboardComponent } from './dashboard.component';
-import { StatBoxComponent } from './components/stat-box/stat-box.component';
 import { StateBoxComponent } from './components/state-box/state-box.component';
+import { ProductSalesChartComponent } from './components/product-sales-chart/product-sales-chart.component';
+import { SharedModule } from '../../../shared/shared.module';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    StatBoxComponent,
-    StateBoxComponent
+    StateBoxComponent,
+    ProductSalesChartComponent
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule
   ]
 })
 export class DashboardModule { }
