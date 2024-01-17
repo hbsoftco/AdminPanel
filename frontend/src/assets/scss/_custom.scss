@@ -5,3 +5,20 @@
 .hb-badge {
     @apply px-4 py-0.5 font-bold text-sm rounded-md;
 }
+
+.tag {
+    @apply px-4 py-1 font-bold text-sm rounded-md;
+}
+
+.pending {
+    @apply bg-secondray-50 text-secondray-400;
+}
+
+.deliver,
+.active {
+    @apply bg-bgGreen text-green;
+}
+
+.inactive {
+    @apply bg-bgRed text-red;
+}

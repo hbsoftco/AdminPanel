@@ -6,26 +6,29 @@
     <!-- end logo and logo type -->
 
     <div class="menu-container">
-        <p class="menu-container_top-nav">Navigation</p>
-        <div *ngFor="let menu of menus; let i = index">
-            <a class="menu-container_item" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="menu.routerLink"
-                routerLinkActive="active-link">
-                <div class="menu-container_item--title">
-                    <img class="menu-icon" [src]="menu.iconSrc" alt="Menu Icon">
-                    <span class="menu-text">{{ menu.title | translate }}</span>
+        <div *ngFor="let menus of menuItems">
+            <p class="menu-container_top-nav">{{menus.category}}</p>
+            <div *ngFor="let menu of menus.menus; let i = index">
+                <a class="menu-container_item" (click)="toggleSubMenu(menu)" [routerLinkActiveOptions]="{ exact: false }"
+                    [routerLink]="menu.routerLink" routerLinkActive="active-link">
+                    <div class="menu-container_item--title">
+                        <img class="menu-icon"
+                            [src]="menu.isSelected ? '/assets/icons/menus/'+menu.iconSelectedSrc : '/assets/icons/menus/'+menu.iconSrc"
+                            alt="Menu Icon">
+                        <span class="menu-text">{{ menu.title | translate }}</span>
+                    </div>
+                    <div *ngIf="menu.items.length > 0">
+                        <img class="w-[1.1rem] h-[1.1rem] mr-1"
+                            [src]="menu.isOpen ? '/assets/icons/menus/chevron-line.svg' : '/assets/icons/menus/chevron-line-down.svg'"
+                            alt="Menu Icon">
+                    </div>
+                </a>
+                <div *ngIf="menu.isOpen" class="menu-items" [@dropDownMenu]>
+                    <a *ngFor="let item of menu.items" class="menu-item" [routerLinkActiveOptions]="{ exact: true }"
+                        [routerLink]="item.routerLink" routerLinkActive="active-sub-link">
+                        {{ item.title }}
+                    </a>
                 </div>
-                <div *ngIf="menu.items.length > 0">
-                    <img class="w-[1.1rem] h-[1.1rem] mr-1"
-                        [src]="menu.isOpen ? '/assets/icons/chevron-line.svg' : '/assets/icons/chevron-line-down.svg'"
-                        alt="Menu Icon">
-                </div>
-            </a>
-            <div *ngIf="menu.isOpen" class="menu-items" [@dropDownMenu]>
-                <ul>
-                    <li *ngFor="let item of menu.items" class="menu-item">
-                        {{ item }}
-                    </li>
-                </ul>
             </div>
         </div>
     </div>

@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { DropDownAnimation } from './sidebar.animation';
 
-interface MenuItem {
-  title: string;
-  iconSrc: string;
-  items: SubMenuItem[];
-  isOpen: boolean;
-  isSelected: boolean;
-  routerLink?: string;
-}
+// interface MenuItem {
+//   title: string;
+//   iconSrc: string;
+//   items: SubMenuItem[];
+//   isOpen: boolean;
+//   isSelected: boolean;
+//   routerLink?: string;
+// }
 
-interface SubMenuItem {
-  title: string;
-  isSelected: boolean;
-  routerLink?: string;
-}
+// interface SubMenuItem {
+//   title: string;
+//   isSelected: boolean;
+//   routerLink?: string;
+// }
 
 @Component({
   selector: 'app-sidebar',
@@ -25,19 +25,74 @@ interface SubMenuItem {
 export class SidebarComponent {
   isOpen = false;
 
-  menus: MenuItem[] = [
-    { title: 'Dashboard', items: [], isOpen: false, iconSrc: '/assets/icons/dash.svg', isSelected: false, routerLink: '/dashboard' },
+  menuItems: any[] = [
     {
-      title: 'Users', items: [
-        { title: 'Add', isSelected: false, routerLink: '/users/new' },
-        { title: 'List', isSelected: false, routerLink: '/users' },
-      ], isOpen: false, iconSrc: '/assets/icons/users.svg', isSelected: false, routerLink: ''
+      category: 'MAIN',
+      menus: [
+        {
+          title: 'Dashboard', items: [
+            { title: 'eCommerce', isSelected: false, routerLink: '/dashboard/eCommerce' },
+            { title: 'Analytics', isSelected: false, routerLink: '/dashboard/analyics' },
+            { title: 'Project Management', isSelected: false, routerLink: '/pmanage' },
+            { title: 'LMS Courses', isSelected: false, routerLink: '/lms' },
+          ],
+          isOpen: false,
+          iconSrc: 'dash.svg',
+          iconSelectedSrc: 'dash-s.svg',
+          isSelected: false,
+          routerLink: '/dashboard'
+        },
+        {
+          title: 'Users',
+          items: [],
+          isOpen: false,
+          iconSrc: 'dash.svg',
+          iconSelectedSrc: 'dash-s.svg',
+          isSelected: false,
+          routerLink: '/hossein'
+        },
+        {
+          title: 'Users', items: [
+            { title: 'Add', isSelected: false, routerLink: '/users/users/new' },
+            { title: 'List', isSelected: false, routerLink: '/users/list' },
+          ],
+          isOpen: false,
+          iconSrc: 'users.svg',
+          iconSelectedSrc: 'users-s.svg',
+          isSelected: false,
+          routerLink: '/users'
+        },
+      ]
+    },
+    {
+      category: 'APPS',
+      menus: [
+        { title: 'Hbsoft', items: [], isOpen: false, iconSrc: '/assets/icons/dash.svg', isSelected: false, routerLink: '/user' },
+        {
+          title: 'Users', items: [
+            { title: 'Add', isSelected: false, routerLink: '/users/new' },
+            { title: 'List', isSelected: false, routerLink: '/users' },
+          ], isOpen: false, iconSrc: '/assets/icons/users.svg', isSelected: false, routerLink: ''
+        },
+      ]
     },
   ];
 
-  toggleMenu(index: number, length: number): void {
-    if (length) {
-      this.menus[index].isOpen = !this.menus[index].isOpen;
-    }
+  toggleSubMenu(menu: any) {
+    // Set isSelected to true for the selected menu
+    menu.isSelected = true;
+
+    // Set isSelected to false for all other menus
+    this.menuItems.forEach((category) => {
+      category.menus.forEach((item: any) => {
+        if (item !== menu) {
+          item.isSelected = false;
+        }
+      });
+    });
+
+    // Toggle the isOpen property as before
+    menu.isOpen = !menu.isOpen;
   }
+
 }

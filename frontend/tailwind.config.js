@@ -19,6 +19,7 @@ module.exports = {
           '900': '#002a0e',
         },
         secondray: {
+          '50': '#e6ebe9',
           '300': '#849891',
           '400': '#718980',
         },
@@ -26,23 +27,6 @@ module.exports = {
         bgGreen: "#00b69b1a",
         red: "#ee368c",
         bgRed:"#ee368c1a",
-
-        // primary: "#20ab78",
-
-        // darkPrimary: "#154b33",
-
-        // extraDarkPrimary: "#00270b",
-
-        // lightPrimary: "#617b72",
-        // light2Primary: "#b7c1bd",
-        // extraLightPrimary: "#e2f0ed",
-
-
-        // secondary: "#ce9f29",
-        // darkSecondary: "#2c2c2c",
-        // lightSecondary: "#a09f9f",
-        // black: '#333',
-        // lightBlack: '#444'
       },
       // fontFamily: {
       //   IRANSans: ['IRANSans']

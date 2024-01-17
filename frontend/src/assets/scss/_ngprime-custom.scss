@@ -1,0 +1,51 @@
+.p-datatable-table {
+
+    .p-datatable-thead {
+        tr {
+            th {
+                @apply py-3 px-2 text-primary-900 text-sm;
+            }
+        }
+    }
+
+    .p-datatable-tbody {
+        tr {
+            td {
+                @apply text-secondray-400 p-2 text-sm;
+            }
+        }
+    }
+}
+
+.p-highlight {
+    @apply bg-primary-50 text-primary-600;
+}
+
+.p-dropdown:not(.p-disabled):hover {
+    @apply border-primary-500;
+}
+
+.p-focus {
+    @apply border-primary-500 outline-none outline-offset-0 shadow-primary-300 shadow-none;
+}
+
+.p-dropdown-panel {
+    .p-dropdown-items-wrapper{
+        .p-dropdown-items{
+            .p-element{
+                @apply text-center;
+            }
+        }
+    }
+}
+
+// .p-panelmenu .p-panelmenu-header > a:focus,
+// .p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link:focus,
+// .p-autocomplete .p-autocomplete-multiple-container:not(.p-disabled).p-focus,
+// .p-inputtext:enabled:focus,
+// .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus,
+// .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus,
+// .p-listbox .p-listbox-list .p-listbox-item:focus,
+// .p-button:focus {
+//     box-shadow: none !important;
+// }

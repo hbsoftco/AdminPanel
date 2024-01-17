@@ -7,15 +7,33 @@ import { DashboardComponent } from './dashboard.component';
 import { StateBoxComponent } from './components/state-box/state-box.component';
 import { ProductSalesChartComponent } from './components/product-sales-chart/product-sales-chart.component';
 import { SharedModule } from '../../../shared/shared.module';
+import { RecentOrdersComponent } from './components/recent-orders/recent-orders.component';
+import { FormsModule } from '@angular/forms';
+import { ECommerceComponent } from './e-commerce/e-commerce.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { ProjectManagementComponent } from './project-management/project-management.component';
+import { LmsComponent } from './lms/lms.component';
+import { CryptoComponent } from './crypto/crypto.component';
+import { HelpDeskComponent } from './help-desk/help-desk.component';
+import { SaasAppComponent } from './saas-app/saas-app.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     StateBoxComponent,
-    ProductSalesChartComponent
+    ProductSalesChartComponent,
+    RecentOrdersComponent,
+    ECommerceComponent,
+    AnalyticsComponent,
+    ProjectManagementComponent,
+    LmsComponent,
+    CryptoComponent,
+    HelpDeskComponent,
+    SaasAppComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     DashboardRoutingModule,
     SharedModule

@@ -29,4 +29,15 @@
             @apply text-primary-700 font-bold;
         }
     }
+
+
+    .menu-items {
+        .menu-item {
+            @apply block p-2 pl-8 mx-2 text-base transition-all duration-200 hover:bg-primary-500 hover:text-white rounded-md;
+        }
+
+        .active-sub-link {
+            @apply bg-primary-500 text-white rounded-md;
+        }
+    }
 }
