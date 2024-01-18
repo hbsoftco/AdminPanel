@@ -6,12 +6,13 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { NgPrimeModule } from '../ng-prime/ng-prime.module';
+import { CardComponent } from './card/card.component';
 
-const COMPONENTS = [TopNavComponent, SidebarComponent];
+const COMPONENTS = [TopNavComponent, SidebarComponent, CardComponent];
 
 @NgModule({
   declarations: [
-    COMPONENTS
+    COMPONENTS,
   ],
   imports: [
     NgPrimeModule,

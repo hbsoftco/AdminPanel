@@ -16,6 +16,7 @@ import { LmsComponent } from './lms/lms.component';
 import { CryptoComponent } from './crypto/crypto.component';
 import { HelpDeskComponent } from './help-desk/help-desk.component';
 import { SaasAppComponent } from './saas-app/saas-app.component';
+import { EStateBoxComponent } from './components/e-commerce/e-state-box/e-state-box.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SaasAppComponent } from './saas-app/saas-app.component';
     LmsComponent,
     CryptoComponent,
     HelpDeskComponent,
-    SaasAppComponent
+    SaasAppComponent,
+    EStateBoxComponent
   ],
   imports: [
     FormsModule,

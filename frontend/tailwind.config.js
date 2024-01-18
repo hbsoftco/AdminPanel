@@ -28,9 +28,10 @@ module.exports = {
         red: "#ee368c",
         bgRed:"#ee368c1a",
       },
-      // fontFamily: {
-      //   IRANSans: ['IRANSans']
-      // },
+      fontFamily: {
+        fontFamily: ['Raleway'],
+        headingFontFamily: ['Open Sans'],
+      },
     },
 
   },
