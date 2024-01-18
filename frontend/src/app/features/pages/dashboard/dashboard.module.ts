@@ -17,6 +17,10 @@ import { CryptoComponent } from './crypto/crypto.component';
 import { HelpDeskComponent } from './help-desk/help-desk.component';
 import { SaasAppComponent } from './saas-app/saas-app.component';
 import { EStateBoxComponent } from './components/e-commerce/e-state-box/e-state-box.component';
+import { ERatingBoxComponent } from './components/e-commerce/e-rating-box/e-rating-box.component';
+import { AudienceOverviewComponent } from './components/e-commerce/audience-overview/audience-overview.component';
+import { ELiveVisitsComponent } from './components/e-commerce/e-live-visits/e-live-visits.component';
+import { EVisitByDayComponent } from './components/e-commerce/e-visit-by-day/e-visit-by-day.component';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { EStateBoxComponent } from './components/e-commerce/e-state-box/e-state-
     CryptoComponent,
     HelpDeskComponent,
     SaasAppComponent,
-    EStateBoxComponent
+    EStateBoxComponent,
+    ERatingBoxComponent,
+    AudienceOverviewComponent,
+    ELiveVisitsComponent,
+    EVisitByDayComponent
   ],
   imports: [
     FormsModule,

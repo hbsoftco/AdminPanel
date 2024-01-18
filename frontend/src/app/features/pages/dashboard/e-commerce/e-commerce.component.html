@@ -1,35 +1,37 @@
 <div class="mx-4 pb-4">
     <div class="grid grid-cols-12 gap-4 mb-4">
         <div class="col-span-12 xl:col-span-8">
+            <div class="grid grid-cols-12 gap-4 mb-4">
+                <div class="col-span-12 xl:col-span-4" *ngFor="let item of data; let i = index">
+                    <app-e-state-box [price]="item.price" [state]="item.state"
+                        [percentage]="item.percentage"></app-e-state-box>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 gap-4 mb-4">
+                <div class="col-span-12 xl:col-span-12">
+                    <app-audience-overview></app-audience-overview>
+                </div>
+            </div>
             <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-12 xl:col-span-4">
-                    <app-e-state-box></app-e-state-box>
+                <div class="col-span-12 xl:col-span-8 mb-4">
+                    <app-e-visit-by-day></app-e-visit-by-day>
                 </div>
-                <div class="col-span-12 xl:col-span-4">
-                    <app-e-state-box></app-e-state-box>
-                </div>
-                <div class="col-span-12 xl:col-span-4">
-                    <app-e-state-box></app-e-state-box>
+                <div class="col-span-12 xl:col-span-4 mb-4">
+                    
                 </div>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-4">
-            <app-e-state-box></app-e-state-box>
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-12 mb-4">
+                    <app-e-rating-box></app-e-rating-box>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-12 mb-4">
+                    <app-e-live-visits></app-e-live-visits>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!-- 
-<div class="grid grid-cols-10 gap-4 mb-4">
-    <div class="col-span-12 xl:col-span-2">
-        <app-e-state-box></app-e-state-box>
-    </div>
-    <div class="col-span-12 xl:col-span-2">
-        <app-e-state-box></app-e-state-box>
-    </div>
-    <div class="col-span-12 xl:col-span-2">
-        <app-e-state-box></app-e-state-box>
-    </div>
-    <div class="col-span-12 xl:col-span-4">
-        <app-e-state-box></app-e-state-box>
-    </div>
-</div> -->

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-e-state-box',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './e-state-box.component.scss'
 })
 export class EStateBoxComponent {
-
+  @Input() price: string = ""
+  @Input() value: string = ""
+  @Input() percentage: string = ""
+  @Input() icon: string = ""
+  @Input() state: boolean = true
 }

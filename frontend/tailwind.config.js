@@ -29,8 +29,8 @@ module.exports = {
         bgRed:"#ee368c1a",
       },
       fontFamily: {
-        fontFamily: ['Raleway'],
-        headingFontFamily: ['Open Sans'],
+        fontFamily: ['Open Sans'],
+        headingFontFamily: ['Raleway'],
       },
     },
 
