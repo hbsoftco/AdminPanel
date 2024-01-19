@@ -2,7 +2,11 @@ p,
 div,
 span,
 strong {
-    // @apply font-fontFamily;
+    @apply font-fontFamily;
+}
+
+.title-header {
+    @apply font-headingFontFamily;
 }
 
 .hb-badge {

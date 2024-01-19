@@ -21,6 +21,7 @@ import { ERatingBoxComponent } from './components/e-commerce/e-rating-box/e-rati
 import { AudienceOverviewComponent } from './components/e-commerce/audience-overview/audience-overview.component';
 import { ELiveVisitsComponent } from './components/e-commerce/e-live-visits/e-live-visits.component';
 import { EVisitByDayComponent } from './components/e-commerce/e-visit-by-day/e-visit-by-day.component';
+import { ImpressionsComponent } from './components/e-commerce/impressions/impressions.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { EVisitByDayComponent } from './components/e-commerce/e-visit-by-day/e-v
     ERatingBoxComponent,
     AudienceOverviewComponent,
     ELiveVisitsComponent,
-    EVisitByDayComponent
+    EVisitByDayComponent,
+    ImpressionsComponent
   ],
   imports: [
     FormsModule,
