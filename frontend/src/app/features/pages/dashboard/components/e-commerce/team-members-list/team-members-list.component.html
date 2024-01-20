@@ -1,0 +1,44 @@
+<app-card>
+    <div>
+        <div class="flex justify-between items-center">
+            <h4>
+                <strong class="title-header text-primary-900 text-lg">Team Members List</strong>
+            </h4>
+            <c-button icon="pi-ellipsis-h" (click)="menu.toggle($event)"></c-button>
+        </div>
+        <div class="mt-2">
+            <p-table [value]="users" [paginator]="true" [rows]="4" [tableStyle]="{ 'min-width': '50rem' }"
+                [rowsPerPageOptions]="[4, 8, 12]" styleClass="p-datatable-striped"
+                [tableStyle]="{'min-width': '50rem'}">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th class="text-left">User</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-user>
+                    <tr>
+                        <td class="">
+                            <div class="flex items-center">
+                                <img class="w-[45px] h-[45px] mr-4 rounded-full"
+                                    [src]="'/assets/images/avatars/'+user.avatar" [alt]="user.avatar">
+                                <div>
+                                    <p class="font-headingFontFamily text-primary-900 text-base font-semibold">
+                                        {{user.name}}
+                                    </p>
+                                    <p class="text-gray-400 text-[15px] text-left">{{user.username}}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.role}}</td>
+                        <td>{{user.status}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+    </div>
+</app-card>
