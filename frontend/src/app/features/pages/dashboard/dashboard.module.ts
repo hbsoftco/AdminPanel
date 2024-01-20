@@ -25,6 +25,7 @@ import { ImpressionsComponent } from './components/e-commerce/impressions/impres
 import { ActivityTimelineComponent } from './components/activity-timeline/activity-timeline.component';
 import { SalesByLocationsComponent } from './components/e-commerce/sales-by-locations/sales-by-locations.component';
 import { RevenueStatusComponent } from './components/revenue-status/revenue-status.component';
+import { NewCustomersComponent } from './components/e-commerce/new-customers/new-customers.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { RevenueStatusComponent } from './components/revenue-status/revenue-stat
     ImpressionsComponent,
     ActivityTimelineComponent,
     SalesByLocationsComponent,
-    RevenueStatusComponent
+    RevenueStatusComponent,
+    NewCustomersComponent
   ],
   imports: [
     FormsModule,

@@ -1,1 +1,17 @@
-<p>revenue-status works!</p>
+<app-card>
+    <div>
+        <div class="flex justify-between items-center border-b pb-2">
+            <h4>
+                <strong class="title-header text-primary-900 text-lg">Revenue Status</strong>
+            </h4>
+            <c-button icon="pi-ellipsis-h" (click)="menu.toggle($event)"></c-button>
+        </div>
+        <div class="mt-6">
+            <div class="">
+                <p-chart type="line" [data]="data" height="255" [options]="options" id="hossein">
+                </p-chart>
+            </div>
+        </div>
+    </div>
+    <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+</app-card>

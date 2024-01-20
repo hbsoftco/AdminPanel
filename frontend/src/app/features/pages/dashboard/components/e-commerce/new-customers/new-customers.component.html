@@ -1,0 +1,29 @@
+<app-card>
+    <div>
+        <div class="flex justify-between items-center border-b pb-2">
+            <h4>
+                <strong class="title-header text-primary-900 text-lg">New Customers</strong>
+            </h4>
+            <c-button icon="pi-ellipsis-h" (click)="menu.toggle($event)"></c-button>
+        </div>
+        <div class="mt-6">
+            <div class="flex justify-between items-center mb-7" *ngFor="let item of customers; let i = index">
+                <div class="flex items-center">
+                    <img class="w-[45px] h-[45px] mr-4 rounded-full" [src]="'/assets/images/avatars/'+item.avatar"
+                        [alt]="item.avatar">
+                    <div>
+                        <p class="font-headingFontFamily text-primary-900 text-base font-semibold">{{item.name}}</p>
+                        <p class="text-gray-400 text-[15px]">{{item.username}}</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-secondray-400 text-[15px]">${{item.price}}</span>
+                    <span
+                        class="text-sm bg-primary-50 text-primary-500 px-2 mx-3 font-semibold py-0.5 rounded-md">{{item.orders}}
+                        orders</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+</app-card>

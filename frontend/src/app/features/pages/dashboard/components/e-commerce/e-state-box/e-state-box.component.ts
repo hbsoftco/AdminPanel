@@ -11,4 +11,10 @@ export class EStateBoxComponent {
   @Input() percentage: string = ""
   @Input() icon: string = ""
   @Input() state: boolean = true
+
+  hoveredIcon: string = 's';
+
+  changeIcon(iconType: string): void {
+    this.hoveredIcon = iconType;
+  }
 }
