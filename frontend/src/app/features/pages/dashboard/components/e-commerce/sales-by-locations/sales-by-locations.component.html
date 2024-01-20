@@ -1,0 +1,25 @@
+<app-card>
+    <div>
+        <div class="flex justify-between items-center border-b pb-2">
+            <h4>
+                <strong class="title-header text-primary-900 text-lg">Sales by Locations</strong>
+            </h4>
+            <c-button icon="pi-ellipsis-h" (click)="menu.toggle($event)"></c-button>
+        </div>
+        <div class="mt-6">
+            <div class="p-4">
+                <img src="/assets/images/hex-map.png" class="hex-map" alt="hex-map">
+            </div>
+            <div>
+                <div *ngFor="let item of countries; let i = index" class="mt-6">
+                    <div class="flex justify-between mb-1.5">
+                        <span class="text-primary-700 text-[15px] font-semibold">{{item.name}}</span>
+                        <span class="text-primary-700 text-[15px] font-semibold">{{item.value}}%</span>
+                    </div>
+                    <p-progressBar  [value]="item.value"></p-progressBar>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+</app-card>

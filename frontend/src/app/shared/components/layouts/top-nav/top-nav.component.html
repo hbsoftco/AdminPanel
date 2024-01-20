@@ -10,18 +10,18 @@
             </button>
         </div>
         <div class="flex justify-between items-center">
-            <div>
-                <button (click)="menu.toggle($event)" #btn
-                    class="w-10 h-10 bg-gray-100 flex justify-center items-center transition duration-200 hover:bg-gray-200">
-                    <img src="/assets/images/flags/usa.png" alt="country">
-                </button>
-                <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
-            </div>
             <div class="mx-2">
                 <button
                     class="w-10 h-10 bg-gray-100 flex justify-center items-center rounded-full transition duration-200 hover:bg-gray-200">
                     <img src="/assets/images/flags/usa.png" alt="country">
                 </button>
+            </div>
+            <div>
+                <button (click)="menu.toggle($event)" #btn
+                    class="w-10 h-10 bg-gray-100 flex justify-center items-center rounded-full transition duration-200 hover:bg-gray-200">
+                    <img src="/assets/images/flags/usa.png" alt="country">
+                </button>
+                <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
             </div>
         </div>
     </div>

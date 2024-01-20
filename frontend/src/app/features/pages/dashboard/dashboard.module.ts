@@ -22,6 +22,9 @@ import { AudienceOverviewComponent } from './components/e-commerce/audience-over
 import { ELiveVisitsComponent } from './components/e-commerce/e-live-visits/e-live-visits.component';
 import { EVisitByDayComponent } from './components/e-commerce/e-visit-by-day/e-visit-by-day.component';
 import { ImpressionsComponent } from './components/e-commerce/impressions/impressions.component';
+import { ActivityTimelineComponent } from './components/activity-timeline/activity-timeline.component';
+import { SalesByLocationsComponent } from './components/e-commerce/sales-by-locations/sales-by-locations.component';
+import { RevenueStatusComponent } from './components/revenue-status/revenue-status.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { ImpressionsComponent } from './components/e-commerce/impressions/impres
     AudienceOverviewComponent,
     ELiveVisitsComponent,
     EVisitByDayComponent,
-    ImpressionsComponent
+    ImpressionsComponent,
+    ActivityTimelineComponent,
+    SalesByLocationsComponent,
+    RevenueStatusComponent
   ],
   imports: [
     FormsModule,

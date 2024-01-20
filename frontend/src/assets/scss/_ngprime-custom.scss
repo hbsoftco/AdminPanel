@@ -1,3 +1,57 @@
+.p-tieredmenu {
+    @apply min-w-36;
+
+    .p-tieredmenu-root-list {
+        @apply bg-white text-primary-900 shadow-md rounded-md p-4 border-t border-gray-50;
+
+        .p-menuitem {
+            @apply py-2;
+
+            .p-menuitem-content {
+
+                .p-menuitem-link {
+                    @apply text-sm;
+
+                    .p-menuitem-icon {
+                        @apply mr-2;
+                    }
+
+                    .p-menuitem-text {}
+                }
+            }
+        }
+    }
+}
+
+.p-progressbar {
+    @apply h-1 rounded-md border-none bg-gray-300;
+    .p-progressbar-value {
+        @apply m-0 border-none bg-primary-500;
+    }
+}
+
+.p-progressbar-determinate .p-progressbar-value-animate {
+    transition: width 1s ease-in-out;
+}
+
+.p-progressbar-label	{
+    display: none;
+}
+
+.p-progressbar-determinate .p-progressbar-value {
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    display: none;
+    border: 0 none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+// //////////////////////////
+
 .p-datatable-table {
 
     .p-datatable-thead {
@@ -30,9 +84,9 @@
 }
 
 .p-dropdown-panel {
-    .p-dropdown-items-wrapper{
-        .p-dropdown-items{
-            .p-element{
+    .p-dropdown-items-wrapper {
+        .p-dropdown-items {
+            .p-element {
                 @apply text-center;
             }
         }

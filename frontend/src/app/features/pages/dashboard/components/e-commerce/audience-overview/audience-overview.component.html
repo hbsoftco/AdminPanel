@@ -1,10 +1,14 @@
 <app-card>
     <div>
-        <h4 class="border-b pb-4 mb-2">
-            <strong class="title-header text-primary-900 text-lg">Audience Overview</strong>
-        </h4>
+        <div class="flex justify-between items-center border-b mb-2 pb-4">
+            <h4>
+                <strong class="title-header text-primary-900 text-lg">Audience Overview</strong>
+            </h4>
+            <c-button icon="pi-ellipsis-h" (click)="menu.toggle($event)"></c-button>
+        </div>
         <div>
             <p-chart type="bar" [data]="data" [options]="options"></p-chart>
         </div>
     </div>
+    <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
 </app-card>

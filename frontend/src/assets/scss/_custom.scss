@@ -29,3 +29,12 @@ strong {
 .inactive {
     @apply bg-bgRed text-red;
 }
+
+.primary-btn {
+    @apply bg-primary-500 text-white font-semibold rounded-md px-4 duration-200 transition-all hover:bg-primary-600;
+}
+
+.primary-btn-icon-rounded {
+    @apply rounded-full text-primary-700 font-bold text-xl;
+}
+

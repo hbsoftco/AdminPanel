@@ -32,6 +32,7 @@ export class EVisitByDayComponent {
     };
 
     this.options = {
+      responsive:true,
       plugins: {
         tooltip: {
           backgroundColor: "#117c63"

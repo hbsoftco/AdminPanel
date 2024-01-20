@@ -1,0 +1,5 @@
+<button class="p-2" [ngClass]="handleClass()">
+    {{label}}
+    <span *ngIf="icon" [class]="'pi '+icon"></span>
+    <ng-content></ng-content>
+</button>

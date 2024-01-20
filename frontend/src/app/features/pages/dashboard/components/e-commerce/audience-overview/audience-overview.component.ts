@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-audience-overview',
@@ -6,14 +7,26 @@ import { Component } from '@angular/core';
   styleUrl: './audience-overview.component.scss'
 })
 export class AudienceOverviewComponent {
+  items: MenuItem[] | undefined;
   data: any;
-
   options: any;
 
   ngOnInit() {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
-
+    this.items = [
+      {
+        label: 'Today',
+      },
+      {
+        label: 'Last Month',
+      },
+      {
+        label: 'Last Year',
+      },
+      {
+        label: 'All Time',
+      },
+    ]
+    
     this.data = {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
       datasets: [

@@ -7,8 +7,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { NgPrimeModule } from '../ng-prime/ng-prime.module';
 import { CardComponent } from './card/card.component';
+import { ButtonComponent } from './button/button.component';
 
-const COMPONENTS = [TopNavComponent, SidebarComponent, CardComponent];
+const COMPONENTS = [TopNavComponent, SidebarComponent, CardComponent, ButtonComponent];
 
 @NgModule({
   declarations: [
