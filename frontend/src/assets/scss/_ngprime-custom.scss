@@ -25,39 +25,32 @@
 
 .p-progressbar {
     @apply h-1 rounded-md border-none bg-gray-300;
+
     .p-progressbar-value {
         @apply m-0 border-none bg-primary-500;
     }
-}
 
-.p-progressbar-determinate .p-progressbar-value-animate {
-    transition: width 1s ease-in-out;
-}
+    .p-progressbar-label {
+        @apply hidden;
+    }
 
-.p-progressbar-label	{
-    display: none;
+    .p-progressbar-determinate {
+        .p-progressbar-value-animate {
+            transition: width 1s ease-in-out;
+        }
+    }
 }
-
-.p-progressbar-determinate .p-progressbar-value {
-    height: 100%;
-    width: 0%;
-    position: absolute;
-    display: none;
-    border: 0 none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-// //////////////////////////
 
 .p-datatable-table {
 
     .p-datatable-thead {
         tr {
             th {
-                @apply py-3 px-2 text-primary-900 text-sm;
+                @apply py-3.5 px-2 text-primary-900 font-headingFontFamily text-sm bg-[#f7faff] relative;
+            }
+
+            th:not(:last-child) {
+                @apply after:absolute after:w-[1px] after:top-[34%] after:right-0 after:h-4 after:bg-slate-200;
             }
         }
     }
@@ -65,11 +58,61 @@
     .p-datatable-tbody {
         tr {
             td {
-                @apply text-secondray-400 p-2 text-sm;
+                @apply text-primary-700 p-2 text-sm text-center;
             }
         }
     }
 }
+
+.p-dropdown-panel {
+    @apply bg-white text-primary-900 shadow-md rounded-md p-0.5 border-t border-gray-50;
+
+    .p-dropdown-item {
+        @apply px-4 py-2;
+    }
+
+    .p-highlight {
+        @apply rounded-md;
+    }
+}
+
+.p-paginator {
+    .p-paginator-pages {
+        .p-paginator-page {
+            @apply w-11 h-11 rounded-md duration-200 transition-all bg-transparent text-gray-600 mx-0.5;
+            @apply hover:bg-gray-100;
+        }
+
+        .p-highlight {
+            @apply bg-primary-50 text-primary-500 font-semibold hover:bg-primary-50;
+        }
+    }
+
+    .p-paginator-first,
+    .p-paginator-last,
+    .p-paginator-prev,
+    .p-paginator-next {
+        @apply w-11 h-11 rounded-md duration-200 transition-all bg-transparent text-gray-600 mx-0;
+    }
+}
+
+.p-dropdown {
+    @apply text-primary-900 mx-2 h-11 relative bg-white border border-gray-200 transition-all duration-200 cursor-pointer rounded-md;
+    // border: 1px solid #d1d5db;
+
+    .p-dropdown-label {
+        @apply p-2 cursor-pointer border-none outline-none block whitespace-nowrap overflow-hidden text-ellipsis;
+    }
+
+    .p-dropdown-trigger {
+        @apply bg-transparent text-gray-500 w-11;
+    }
+
+}
+
+// //////////////////////////
+
+
 
 .p-highlight {
     @apply bg-primary-50 text-primary-600;
@@ -83,6 +126,8 @@
     @apply border-primary-500 outline-none outline-offset-0 shadow-primary-300 shadow-none;
 }
 
+
+
 .p-dropdown-panel {
     .p-dropdown-items-wrapper {
         .p-dropdown-items {
@@ -92,14 +137,3 @@
         }
     }
 }
-
-// .p-panelmenu .p-panelmenu-header > a:focus,
-// .p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link:focus,
-// .p-autocomplete .p-autocomplete-multiple-container:not(.p-disabled).p-focus,
-// .p-inputtext:enabled:focus,
-// .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus,
-// .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus,
-// .p-listbox .p-listbox-list .p-listbox-item:focus,
-// .p-button:focus {
-//     box-shadow: none !important;
-// }

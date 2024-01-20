@@ -7,7 +7,6 @@ import { DashboardComponent } from './dashboard.component';
 import { StateBoxComponent } from './components/state-box/state-box.component';
 import { ProductSalesChartComponent } from './components/product-sales-chart/product-sales-chart.component';
 import { SharedModule } from '../../../shared/shared.module';
-import { RecentOrdersComponent } from './components/recent-orders/recent-orders.component';
 import { FormsModule } from '@angular/forms';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
@@ -26,6 +25,7 @@ import { ActivityTimelineComponent } from './components/activity-timeline/activi
 import { SalesByLocationsComponent } from './components/e-commerce/sales-by-locations/sales-by-locations.component';
 import { RevenueStatusComponent } from './components/revenue-status/revenue-status.component';
 import { NewCustomersComponent } from './components/e-commerce/new-customers/new-customers.component';
+import { RecentOrdersComponent } from './components/e-commerce/recent-orders/recent-orders.component';
 
 
 @NgModule({
