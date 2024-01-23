@@ -40,7 +40,7 @@
                         <td>{{product.vendor}}</td>
                         <td>{{product.date}}</td>
                         <td>
-                            <span class="tag" [ngClass]="product.status | lowercase">
+                            <span class="tag" [ngClass]="getStatusClass(product.status)">
                                 {{product.status}}
                             </span>
                         </td>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { Table } from 'primeng/table';
 import { IRecentOrder } from '../../../../../../core/interfaces';
+import { Utilities } from '../../../../../../core/utils/utilities';
 
 @Component({
   selector: 'app-recent-orders',
@@ -211,6 +211,10 @@ export class RecentOrdersComponent {
         label: 'All Time',
       },
     ]
+  }
+
+  public getStatusClass(type: string): string {
+    return Utilities.setStatusClass(type);
   }
 
 }

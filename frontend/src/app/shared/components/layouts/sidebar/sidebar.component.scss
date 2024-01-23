@@ -6,7 +6,7 @@
     }
 
     &_item {
-        @apply flex justify-between items-center p-2.5 rounded-md m-2 tracking-wide;
+        @apply flex justify-between items-center p-2.5 px-3 rounded-md m-2;
 
         &--title {
             @apply flex items-center;
@@ -16,14 +16,14 @@
             }
 
             .menu-text {
-                @apply text-secondray-300 text-[0.9rem];
+                @apply text-primary-800 text-[15px] font-semibold;
             }
 
         }
     }
 
     .active-link {
-        @apply bg-primary-50 shadow-sm;
+        @apply bg-gray-100;
 
         .menu-text {
             @apply text-primary-700 font-semibold;

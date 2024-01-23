@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { IUser } from '../../../../../../core/interfaces';
+import { Utilities } from '../../../../../../core/utils/utilities';
 
 @Component({
   selector: 'app-team-members-list',
@@ -10,6 +11,10 @@ import { IUser } from '../../../../../../core/interfaces';
 export class TeamMembersListComponent {
   users: IUser[] = []
   items: MenuItem[] | undefined;
+  
+  public getStatusClass(type: string): string {
+    return Utilities.setStatusClass(type);
+  }
 
   ngOnInit() {
     this.users = [

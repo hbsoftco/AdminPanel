@@ -34,7 +34,11 @@
                         </td>
                         <td>{{user.email}}</td>
                         <td>{{user.role}}</td>
-                        <td>{{user.status}}</td>
+                        <td>
+                            <span class="tag" [ngClass]="getStatusClass(user.status)">
+                                {{user.status}}
+                            </span>
+                        </td>
                     </tr>
                 </ng-template>
             </p-table>

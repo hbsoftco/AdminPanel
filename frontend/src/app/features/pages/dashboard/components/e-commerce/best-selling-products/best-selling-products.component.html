@@ -1,0 +1,28 @@
+<app-card>
+    <div>
+        <div class="flex justify-between items-center border-b pb-2">
+            <h4>
+                <strong class="title-header text-primary-900 text-lg">Best Selling Products</strong>
+            </h4>
+            <c-button icon="pi-ellipsis-h" (click)="menu.toggle($event)"></c-button>
+        </div>
+        <div class="mt-6">
+            <div class="flex justify-between items-center mb-[1.65rem]" *ngFor="let item of products; let i = index">
+                <div class="flex items-center">
+                    <img class="w-[50px] h-[46px] mr-3 rounded-xl" [src]="'/assets/images/products/'+item.image"
+                        [alt]="item.image">
+                    <a routerLink="/" class="font-semibold text-sm">
+                        <p class="title-header text-primary-800 duration-200 transition-all hover:text-primary-900 text-base font-semibold">{{item.product}}</p>
+                        <p class="text-primary-600 text-[15px] font-normal">ID:{{item.id}}</p>
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-secondray-400 text-[15px]">${{item.price}}</span>
+                    <span class="text-primary-900 text-[15px] mx-4">{{item.count}}</span>
+                    <span class="text-primary-500 text-[15px] font-semibold">{{item.type}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+</app-card>

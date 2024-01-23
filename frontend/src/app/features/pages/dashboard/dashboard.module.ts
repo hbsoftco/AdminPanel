@@ -27,6 +27,7 @@ import { RevenueStatusComponent } from './components/revenue-status/revenue-stat
 import { NewCustomersComponent } from './components/e-commerce/new-customers/new-customers.component';
 import { RecentOrdersComponent } from './components/e-commerce/recent-orders/recent-orders.component';
 import { TeamMembersListComponent } from './components/e-commerce/team-members-list/team-members-list.component';
+import { BestSellingProductsComponent } from './components/e-commerce/best-selling-products/best-selling-products.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { TeamMembersListComponent } from './components/e-commerce/team-members-l
     SalesByLocationsComponent,
     RevenueStatusComponent,
     NewCustomersComponent,
-    TeamMembersListComponent
+    TeamMembersListComponent,
+    BestSellingProductsComponent
   ],
   imports: [
     FormsModule,
