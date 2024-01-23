@@ -8,8 +8,9 @@ import { RouterModule } from '@angular/router';
 import { NgPrimeModule } from '../ng-prime/ng-prime.module';
 import { CardComponent } from './card/card.component';
 import { ButtonComponent } from './button/button.component';
+import { FooterComponent } from './layouts/footer/footer.component';
 
-const COMPONENTS = [TopNavComponent, SidebarComponent, CardComponent, ButtonComponent];
+const COMPONENTS = [TopNavComponent, SidebarComponent, CardComponent, ButtonComponent, FooterComponent];
 
 @NgModule({
   declarations: [

@@ -7,7 +7,10 @@
 
     <div class="menu-container">
         <div *ngFor="let menus of menuItems">
-            <p class="menu-container_top-nav">{{menus.category}}</p>
+            <p class="menu-container_top-nav flex items-center">
+                <span class="w-1.5 h-1.5 block mr-1.5 bg-gray-300 rounded-full"></span>
+                <span class="text-sm">{{menus.category}}</span>
+            </p>
             <div *ngFor="let menu of menus.menus; let i = index">
                 <a class="menu-container_item" (click)="toggleSubMenu(menu)" [routerLinkActiveOptions]="{ exact: false }"
                     [routerLink]="menu.routerLink" routerLinkActive="active-link">

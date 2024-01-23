@@ -42,40 +42,40 @@ export class SidebarComponent {
           isSelected: false,
           routerLink: '/dashboard'
         },
-        {
-          title: 'Users',
-          items: [],
-          isOpen: false,
-          iconSrc: 'dash.svg',
-          iconSelectedSrc: 'dash-s.svg',
-          isSelected: false,
-          routerLink: '/hossein'
-        },
+        // {
+        //   title: 'Users',
+        //   items: [],
+        //   isOpen: false,
+        //   iconSrc: 'dash.svg',
+        //   iconSelectedSrc: 'dash-s.svg',
+        //   isSelected: false,
+        //   routerLink: '/hossein'
+        // },
+        // {
+        //   title: 'Users', items: [
+        //     { title: 'Add', isSelected: false, routerLink: '/users/users/new' },
+        //     { title: 'List', isSelected: false, routerLink: '/users/list' },
+        //   ],
+        //   isOpen: false,
+        //   iconSrc: 'users.svg',
+        //   iconSelectedSrc: 'users-s.svg',
+        //   isSelected: false,
+        //   routerLink: '/users'
+        // },
+      ]
+    },
+    {
+      category: 'APPS',
+      menus: [
+        { title: 'File Manager', items: [], isOpen: false, iconSrc: '/assets/icons/dash.svg', isSelected: false, routerLink: '' },
         {
           title: 'Users', items: [
-            { title: 'Add', isSelected: false, routerLink: '/users/users/new' },
-            { title: 'List', isSelected: false, routerLink: '/users/list' },
-          ],
-          isOpen: false,
-          iconSrc: 'users.svg',
-          iconSelectedSrc: 'users-s.svg',
-          isSelected: false,
-          routerLink: '/users'
+            { title: 'Add', isSelected: false, routerLink: '/users/new' },
+            { title: 'List', isSelected: false, routerLink: '/users' },
+          ], isOpen: false, iconSrc: '/assets/icons/users.svg', isSelected: false, routerLink: ''
         },
       ]
     },
-    // {
-    //   category: 'APPS',
-    //   menus: [
-    //     { title: 'Hbsoft', items: [], isOpen: false, iconSrc: '/assets/icons/dash.svg', isSelected: false, routerLink: '/user' },
-    //     {
-    //       title: 'Users', items: [
-    //         { title: 'Add', isSelected: false, routerLink: '/users/new' },
-    //         { title: 'List', isSelected: false, routerLink: '/users' },
-    //       ], isOpen: false, iconSrc: '/assets/icons/users.svg', isSelected: false, routerLink: ''
-    //     },
-    //   ]
-    // },
   ];
 
   toggleSubMenu(menu: any) {
