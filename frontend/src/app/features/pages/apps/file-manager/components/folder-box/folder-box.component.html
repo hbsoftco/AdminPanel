@@ -1,0 +1,18 @@
+<app-card padding="p-4" *ngIf="folderBox">
+    <div class="flex justify-between items-center">
+        <div>
+            <p-checkbox [(ngModel)]="folderBox.check" [binary]="true" inputId="binary"></p-checkbox>
+        </div>
+        <c-button icon="pi-ellipsis-h" (click)="menu.toggle($event)"></c-button>
+    </div>
+    <div class="p-4 py-7">
+        <img [src]="'/assets/icons/'+folderBox.icon" alt="folder" class="m-auto">
+        <a class="text-primary-900 duration-200 transition-all hover:text-primary-600 mt-3 block cursor-pointer text-center text-[15px] font-semibold"
+            [routerLink]="folderBox.link">{{folderBox.name}}</a>
+    </div>
+    <div class="flex justify-between items-center text-[15px] text-primary-700 font-normal mx-2 mb-2">
+        <p>{{folderBox.files}}</p>
+        <p>{{folderBox.capacity}}</p>
+    </div>
+</app-card>
+<p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>

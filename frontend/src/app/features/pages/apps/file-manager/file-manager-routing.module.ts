@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FileManagerComponent } from './file-manager/file-manager.component';
-import { MyDriveComponent } from './components/my-drive/my-drive.component';
-import { AssetsComponent } from './components/assets/assets.component';
-import { ProjectsComponent } from './components/projects/projects.component';
+import { MyDriveComponent } from './my-drive/my-drive.component';
+import { AssetsComponent } from './assets/assets.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 const routes: Routes = [

@@ -1,0 +1,7 @@
+<app-card padding="p-0">
+    <div class="bg-gray-100 rounded-lg p-4 py-10 ">
+        <img [src]="'/assets/icons/'+fileBox?.icon" alt="fileBox?.icon" class="m-auto">
+        <a class="text-primary-900 duration-200 transition-all hover:text-primary-600 mt-3 block cursor-pointer text-center text-[15px] font-semibold"
+            [routerLink]="fileBox?.link">{{fileBox?.name}}</a>
+    </div>
+</app-card>

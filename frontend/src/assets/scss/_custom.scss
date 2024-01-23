@@ -31,7 +31,7 @@ strong {
 }
 
 .primary-btn {
-    @apply bg-primary-500 text-white font-semibold rounded-md px-4 duration-200 transition-all hover:bg-primary-600;
+    @apply bg-primary-500 py-3 text-white font-semibold rounded-md px-4 duration-200 transition-all hover:bg-primary-600;
 }
 
 .primary-btn-icon-rounded {

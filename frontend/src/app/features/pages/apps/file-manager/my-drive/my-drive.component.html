@@ -1,0 +1,35 @@
+<div class="grid grid-cols-12 gap-4 mb-4">
+    <div class="col-span-12 xl:col-span-3" *ngFor="let item of boxes; let i = index">
+        <app-folder-box [folderBox]="item"></app-folder-box>
+    </div>
+</div>
+<div class="grid grid-cols-12 gap-4 mb-4">
+    <div class="col-span-12 xl:col-span-12">
+        <app-card>
+            <div class="flex justify-between items-center">
+                <h4 class="text-primary-900 font-headingFontFamily font-bold text-lg">Recent Files</h4>
+                <c-button>
+                    <i class="pi pi-plus text-xs mr-2"></i>
+                    <span class="text-sm">Create Folder</span>
+                </c-button>
+            </div>
+            <app-file-list [files]="filesList"></app-file-list>
+        </app-card>
+    </div>
+    <div class="col-span-12 xl:col-span-12">
+        <app-card>
+            <div class="flex justify-between items-center">
+                <h4 class="text-primary-900 font-headingFontFamily font-bold text-lg">Documents</h4>
+                <c-button>
+                    <i class="pi pi-plus text-xs mr-2"></i>
+                    <span class="text-sm">Create Document</span>
+                </c-button>
+            </div>
+            <div class="grid grid-cols-12 gap-4 my-4">
+                <div class="col-span-12 xl:col-span-2" *ngFor="let item of files; let i = index">
+                    <app-file-box [fileBox]="item"></app-file-box>
+                </div>
+            </div>
+        </app-card>
+    </div>
+</div>

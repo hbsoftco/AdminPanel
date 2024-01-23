@@ -11,6 +11,7 @@ import { TagModule } from 'primeng/tag';
 import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
 import { PanelMenuModule } from 'primeng/panelmenu';
+import { CheckboxModule } from 'primeng/checkbox';
 
 const MODULES = [
   ChartModule,
@@ -22,7 +23,8 @@ const MODULES = [
   TagModule,
   InputTextModule,
   RippleModule,
-  PanelMenuModule
+  PanelMenuModule,
+  CheckboxModule
 ];
 
 @NgModule({
