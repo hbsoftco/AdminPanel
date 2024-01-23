@@ -1,0 +1,32 @@
+<div class="grid grid-cols-12 gap-4 mx-4 mb-4">
+    <div class="col-span-12 xl:col-span-3">
+        <app-card padding="p-5">
+            <div>
+                <h4 class="text-lg font-headingFontFamily font-bold text-primary-900 mb-4">My Drive</h4>
+                <div class="relative mb-4">
+                    <input type="text"
+                        class="py-2.5 pl-10 w-full text-sm outline-none font-normal bg-gray-100 border-none rounded-full"
+                        placeholder="Search here ...">
+                    <button type="button"
+                        class="absolute w-9 h-9 inset-0 ltr:right-auto rtl:left-auto appearance-none peer-focus:text-primary flex justify-center items-center">
+                        <img class="w-5 h-5 relative top-0.5 left-0.5" src="/assets/icons/search-line.svg"
+                            alt="Search Icon">
+                    </button>
+                </div>
+                <div class="mb-6">
+                    <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu>
+                </div>
+                <div>
+                    <p class="mb-1.5 text-primary-700 text-[15px] font-semibold">Storage Status</p>
+                    <p-progressBar  [value]="80"></p-progressBar>
+                    <p class="text-gray-400 text-[15px] mt-1">86.5 GB Used of 120 GB</p>
+                </div>
+            </div>
+        </app-card>
+    </div>
+    <div class="col-span-12 xl:col-span-9">
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

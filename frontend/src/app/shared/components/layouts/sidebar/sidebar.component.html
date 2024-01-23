@@ -12,7 +12,21 @@
                 <span class="text-sm">{{menus.category}}</span>
             </p>
             <div *ngFor="let menu of menus.menus; let i = index">
-                <a class="menu-container_item" (click)="toggleSubMenu(menu)" [routerLinkActiveOptions]="{ exact: false }"
+                <a *ngIf="menu.items.length" class="menu-container_item cursor-pointer" (click)="toggleSubMenu(menu)"
+                    routerLinkActive="active-link">
+                    <div class="menu-container_item--title">
+                        <img class="menu-icon"
+                            [src]="menu.isSelected ? '/assets/icons/menus/'+menu.iconSelectedSrc : '/assets/icons/menus/'+menu.iconSrc"
+                            alt="Menu Icon">
+                        <span class="menu-text">{{ menu.title | translate }}</span>
+                    </div>
+                    <div *ngIf="menu.items.length > 0">
+                        <img class="w-[1.1rem] h-[1.1rem] mr-1"
+                            [src]="menu.isOpen ? '/assets/icons/menus/chevron-line.svg' : '/assets/icons/menus/chevron-line-down.svg'"
+                            alt="Menu Icon">
+                    </div>
+                </a>
+                <a *ngIf="!menu.items.length" class="menu-container_item" [routerLinkActiveOptions]="{ exact: false }"
                     [routerLink]="menu.routerLink" routerLinkActive="active-link">
                     <div class="menu-container_item--title">
                         <img class="menu-icon"

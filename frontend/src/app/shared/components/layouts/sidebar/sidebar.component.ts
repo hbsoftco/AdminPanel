@@ -67,13 +67,30 @@ export class SidebarComponent {
     {
       category: 'APPS',
       menus: [
-        { title: 'File Manager', items: [], isOpen: false, iconSrc: '/assets/icons/dash.svg', isSelected: false, routerLink: '' },
         {
-          title: 'Users', items: [
-            { title: 'Add', isSelected: false, routerLink: '/users/new' },
-            { title: 'List', isSelected: false, routerLink: '/users' },
-          ], isOpen: false, iconSrc: '/assets/icons/users.svg', isSelected: false, routerLink: ''
+          title: 'File Manager', items: [
+            { title: 'My Drive', isSelected: false, routerLink: '/apps/file-manager/my-drive' },
+            { title: 'Assets', isSelected: false, routerLink: '/apps/file-manager/assets' },
+            { title: 'Projects', isSelected: false, routerLink: '/apps/file-manager/projects' },
+            { title: 'Personal', isSelected: false, routerLink: '/apps/file-manager/personal' },
+            { title: 'Templates', isSelected: false, routerLink: '/apps/file-manager/templates' },
+            { title: 'Documents', isSelected: false, routerLink: '/apps/file-manager/documents' },
+            { title: 'Media', isSelected: false, routerLink: '/apps/file-manager/media' },
+            { title: 'Recent Files', isSelected: false, routerLink: '/apps/file-manager/recent-files' },
+          ],
+          isOpen: false,
+          iconSrc: 'layer.svg',
+          iconSelectedSrc: 'layer-s.svg',
+          isSelected: false,
+          routerLink: '/apps'
         },
+        // { title: '', items: [], isOpen: false, iconSrc: '/assets/icons/.svg', isSelected: false, routerLink: '' },
+        // {
+        //   title: 'Users', items: [
+        //     { title: 'Add', isSelected: false, routerLink: '/users/new' },
+        //     { title: 'List', isSelected: false, routerLink: '/users' },
+        //   ], isOpen: false, iconSrc: '/assets/icons/users.svg', isSelected: false, routerLink: ''
+        // },
       ]
     },
   ];

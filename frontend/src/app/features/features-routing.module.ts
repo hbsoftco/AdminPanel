@@ -5,7 +5,7 @@ import { BaseComponent } from './base/base.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/dashboard/eCommerce',
     pathMatch: 'full',
   },
   {
@@ -27,7 +27,15 @@ const routes: Routes = [
           ),
       },
     ]
-  }
+  },
+  {
+    path: 'apps',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./pages/apps/apps.module').then(
+        (m) => m.AppsModule
+      ),
+  },
 ]
 
 @NgModule({

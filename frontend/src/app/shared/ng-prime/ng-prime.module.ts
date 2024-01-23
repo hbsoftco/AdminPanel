@@ -10,6 +10,7 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { TagModule } from 'primeng/tag';
 import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
+import { PanelMenuModule } from 'primeng/panelmenu';
 
 const MODULES = [
   ChartModule,
@@ -20,7 +21,8 @@ const MODULES = [
   ProgressBarModule,
   TagModule,
   InputTextModule,
-  RippleModule
+  RippleModule,
+  PanelMenuModule
 ];
 
 @NgModule({
