@@ -1,0 +1,24 @@
+<div class="flex justify-center items-center cursor-pointer" (click)="op.toggle($event)">
+    <button (click)="op.toggle($event)" #btn
+        class="w-10 h-10 bg-gray-100 flex justify-center items-center rounded-full transition duration-200 hover:bg-gray-200">
+        <img src="/assets/icons/sms.svg" class="w-5" alt="notification">
+    </button>
+
+    <p-overlayPanel #op>
+        <ng-template pTemplate="content">
+            <div class="min-w-80">
+                <header class="flex justify-between items-center bg-primary-500 text-white p-4 py-3 rounded-t-lg">
+                    <h5 class="font-bold font-headingFontFamily text-lg">Emails</h5>
+                    <span class="text-sm cursor-pointer">Mark all as read</span>
+                </header>
+                <content>
+                    
+                </content>
+                <footer>
+                    <p class="text-center text-primary-500 p-3 text-sm">View All</p>
+                </footer>
+            </div>
+        </ng-template>
+    </p-overlayPanel>
+
+</div>
