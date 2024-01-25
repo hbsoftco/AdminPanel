@@ -1,5 +1,63 @@
 <div class="mx-4 mb-4">
-    <app-card>
-        hossein bajan
-    </app-card>
+    <div class="grid grid-cols-12 gap-4 mb-4">
+        <div class="col-span-12 xl:col-span-12">
+            <app-card>
+                <div class="flex justify-between items-center mb-4">
+                    <h4 class="text-primary-900 font-headingFontFamily font-bold text-lg">My Tasks</h4>
+                    <c-button>
+                        <i class="pi pi-plus text-xs mr-2"></i>
+                        <span class="text-sm">Add Task</span>
+                    </c-button>
+                </div>
+                <div>
+                    <p-table [value]="files" [paginator]="true" [rows]="10" [tableStyle]="{ 'min-width': '50rem' }"
+                        [rowsPerPageOptions]="[10, 15, 20]" styleClass="p-datatable-striped custom-table"
+                        [tableStyle]="{'min-width': '50rem'}">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th class="text-left">Task Name</th>
+                                <th>Assigned</th>
+                                <th>Deadline</th>
+                                <th>Status</th>
+                                <th>Completion</th>
+                                <th>Priority</th>
+                                <th>Actions</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-task>
+                            <tr>
+                                <td>
+                                    <div class="flex justify-start items-center">
+                                        <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
+                                        <a
+                                            class="font-semibold font-headingFontFamily ml-2 hover:text-primary-900 duration-200 transition-all text-sm">
+                                            {{task.name}}
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <img [src]="'/assets/images/avatars/' + task.assigned.avatar"
+                                        [alt]="task.assigned.name" class="w-[30px] h-[30px] rounded-full m-auto"
+                                        pTooltip="{{task.assigned.name}}" tooltipPosition="bottom" />
+                                </td>
+                                <td>{{task.deadline}}</td>
+                                <td>
+                                    <span class="tag" [ngClass]="getStatusClass(task.status)">
+                                        {{task.status}}
+                                    </span>
+                                </td>
+                                <td>{{task.completion}}</td>
+                                <td>
+                                    <span class="tag" [ngClass]="getStatusClass(task.priority)">
+                                        {{task.priority}}
+                                    </span>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </app-card>
+        </div>
+    </div>
 </div>

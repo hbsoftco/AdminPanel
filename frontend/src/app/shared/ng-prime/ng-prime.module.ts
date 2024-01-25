@@ -12,6 +12,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { CheckboxModule } from 'primeng/checkbox';
+import { TooltipModule } from 'primeng/tooltip';
 
 const MODULES = [
   ChartModule,
@@ -24,7 +25,8 @@ const MODULES = [
   InputTextModule,
   RippleModule,
   PanelMenuModule,
-  CheckboxModule
+  CheckboxModule,
+  TooltipModule
 ];
 
 @NgModule({

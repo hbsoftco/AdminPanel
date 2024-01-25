@@ -115,7 +115,6 @@
 
 }
 
-
 .p-panelmenu {
     .p-highlight {
         @apply bg-white;
@@ -167,7 +166,7 @@
                         }
                     }
 
-                    .p-menuitem-link-active{
+                    .p-menuitem-link-active {
                         .p-menuitem-text {
                             @apply text-primary-500;
                         }
@@ -215,7 +214,50 @@
     @apply border-primary-500;
 }
 
+.p-tooltip {
+    @apply absolute hidden pointer-events-none;
 
+    .p-tooltip-text {
+        @apply px-2 py-1.5 bg-[#4b5563] text-white shadow-sm rounded-md break-words whitespace-pre-line;
+    }
+
+    .p-tooltip-arrow {
+        @apply scale-[2] absolute w-0 h-0 border-transparent border-solid;
+    }
+
+}
+
+.p-tooltip-right {
+    @apply p-0 px-1;
+
+    .p-tooltip-arrow {
+        @apply border-r-[#4b5563] top-1/2 left-0 -mt-1 border-y-[.25rem] border-r-[.25rem] border-l-0;
+    }
+}
+
+.p-tooltip-left {
+    @apply py-0 px-1;
+
+    .p-tooltip-arrow {
+        @apply border-l-[#4b5563] top-1/2 right-0 -ml-1 border-y-[.25rem] border-r-0 border-l-[.25rem];
+    }
+}
+
+.p-tooltip-top {
+    @apply py-1 px-0;
+
+    .p-tooltip-arrow {
+        @apply border-t-[#4b5563] bottom-0 left-1/2 -ml-1 border-t-[.25rem] border-b-0 border-x-[.25rem];
+    }
+}
+
+.p-tooltip-bottom {
+    @apply py-1 px-0;
+
+    .p-tooltip-arrow {
+        @apply border-b-[#4b5563] top-0 left-1/2 -ml-1 border-t-0 border-b-[.25rem] border-x-[.25rem];
+    }
+}
 
 // //////////////////////////
 

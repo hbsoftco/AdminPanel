@@ -14,7 +14,7 @@ strong {
 }
 
 .tag {
-    @apply px-3.5 py-1 font-semibold text-sm rounded-md font-fontFamily;
+    @apply px-3.5 py-[0.12rem] font-medium text-sm rounded-md font-fontFamily;
 }
 
 .pending {
