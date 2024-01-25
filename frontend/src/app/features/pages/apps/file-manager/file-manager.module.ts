@@ -12,6 +12,8 @@ import { FolderBoxComponent } from './components/folder-box/folder-box.component
 import { FileListComponent } from './components/file-list/file-list.component';
 import { FileBoxComponent } from './components/file-box/file-box.component';
 import { TemplatesComponent } from './templates/templates.component';
+import { DocumentsComponent } from './documents/documents.component';
+import { MediaComponent } from './media/media.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { TemplatesComponent } from './templates/templates.component';
     FolderBoxComponent,
     FileListComponent,
     FileBoxComponent,
-    TemplatesComponent
+    TemplatesComponent,
+    DocumentsComponent,
+    MediaComponent
   ],
   imports: [
     SharedModule,

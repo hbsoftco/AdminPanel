@@ -32,13 +32,15 @@ export class FileManagerComponent {
           },
           {
             label: 'Templates',
-            icon: 'pi pi-circle-fill'
+            icon: 'pi pi-circle-fill',
+            routerLink: '/apps/file-manager/templates'
           }
         ]
       },
       {
         label: 'Documents',
         icon: 'pi pi-file',
+        routerLink: '/apps/file-manager/documents'
       },
       {
         label: 'Media',

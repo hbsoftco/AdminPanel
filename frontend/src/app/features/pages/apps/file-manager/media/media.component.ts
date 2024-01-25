@@ -2,16 +2,15 @@ import { Component } from '@angular/core';
 import { IFileList } from '../../../../../core/interfaces';
 
 @Component({
-  selector: 'app-templates',
-  templateUrl: './templates.component.html',
-  styleUrl: './templates.component.scss'
+  selector: 'app-media',
+  templateUrl: './media.component.html',
+  styleUrl: './media.component.scss'
 })
-export class TemplatesComponent {
-
+export class MediaComponent {
   filesList: IFileList[] = [
     {
       name: 'Product UI/UX Design',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Danielle Thompson',
       fileSize: '0.7 GB',
       listedDate: 'Mar 08, 2023',
@@ -19,7 +18,7 @@ export class TemplatesComponent {
     },
     {
       name: 'App Design & Development',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Coder Themes',
       fileSize: '521 MB',
       listedDate: 'Feb 13, 2023',
@@ -27,7 +26,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Annualreport.pdf',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Cooper Sharwood',
       fileSize: '12.5 GB',
       listedDate: 'Nov 29, 2022',
@@ -35,7 +34,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Ubold-sketch-design.zip',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Gary Coley',
       fileSize: '64.2 MB',
       listedDate: 'Dec 18, 2022',
@@ -43,7 +42,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Wireframes',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Jasper Rigg',
       fileSize: '8.3 MB',
       listedDate: 'Nov 25, 2022',
@@ -51,7 +50,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Product UI/UX Design',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Danielle Thompson',
       fileSize: '0.7 GB',
       listedDate: 'Mar 08, 2023',
@@ -59,7 +58,7 @@ export class TemplatesComponent {
     },
     {
       name: 'App Design & Development',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Coder Themes',
       fileSize: '521 MB',
       listedDate: 'Feb 13, 2023',
@@ -67,7 +66,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Annualreport.pdf',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Cooper Sharwood',
       fileSize: '12.5 GB',
       listedDate: 'Nov 29, 2022',
@@ -75,7 +74,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Ubold-sketch-design.zip',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Gary Coley',
       fileSize: '64.2 MB',
       listedDate: 'Dec 18, 2022',
@@ -83,7 +82,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Wireframes',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Jasper Rigg',
       fileSize: '8.3 MB',
       listedDate: 'Nov 25, 2022',
@@ -91,7 +90,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Product UI/UX Design',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Danielle Thompson',
       fileSize: '0.7 GB',
       listedDate: 'Mar 08, 2023',
@@ -99,7 +98,7 @@ export class TemplatesComponent {
     },
     {
       name: 'App Design & Development',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Coder Themes',
       fileSize: '521 MB',
       listedDate: 'Feb 13, 2023',
@@ -107,7 +106,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Annualreport.pdf',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Cooper Sharwood',
       fileSize: '12.5 GB',
       listedDate: 'Nov 29, 2022',
@@ -115,7 +114,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Ubold-sketch-design.zip',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Gary Coley',
       fileSize: '64.2 MB',
       listedDate: 'Dec 18, 2022',
@@ -123,7 +122,7 @@ export class TemplatesComponent {
     },
     {
       name: 'Wireframes',
-      icon: 'folder.png',
+      icon: 'gallery.png',
       owner: 'Jasper Rigg',
       fileSize: '8.3 MB',
       listedDate: 'Nov 25, 2022',
