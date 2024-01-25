@@ -13,6 +13,7 @@ import { RippleModule } from 'primeng/ripple';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TooltipModule } from 'primeng/tooltip';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 const MODULES = [
   ChartModule,
@@ -26,7 +27,8 @@ const MODULES = [
   RippleModule,
   PanelMenuModule,
   CheckboxModule,
-  TooltipModule
+  TooltipModule,
+  OverlayPanelModule
 ];
 
 @NgModule({
