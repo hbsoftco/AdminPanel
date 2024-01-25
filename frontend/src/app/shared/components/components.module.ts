@@ -9,12 +9,20 @@ import { NgPrimeModule } from '../ng-prime/ng-prime.module';
 import { CardComponent } from './card/card.component';
 import { ButtonComponent } from './button/button.component';
 import { FooterComponent } from './layouts/footer/footer.component';
+import { NotificationComponent } from './layouts/components/notification/notification.component';
+import { UserProfileComponent } from './layouts/components/user-profile/user-profile.component';
+import { ChangeLangComponent } from './layouts/components/change-lang/change-lang.component';
+import { EmailsComponent } from './layouts/components/emails/emails.component';
 
 const COMPONENTS = [TopNavComponent, SidebarComponent, CardComponent, ButtonComponent, FooterComponent];
 
 @NgModule({
   declarations: [
     COMPONENTS,
+    NotificationComponent,
+    UserProfileComponent,
+    ChangeLangComponent,
+    EmailsComponent,
   ],
   imports: [
     NgPrimeModule,
