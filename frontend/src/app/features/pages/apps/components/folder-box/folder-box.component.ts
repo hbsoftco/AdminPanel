@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { IFolderBox } from '../../../../../../core/interfaces';
 import { MenuItem } from 'primeng/api';
+import { IFolderBox } from '../../../../../core/interfaces';
 
 @Component({
   selector: 'app-folder-box',

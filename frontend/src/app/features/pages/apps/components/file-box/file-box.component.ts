@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IFileBox } from '../../../../../../core/interfaces';
+import { IFileBox } from '../../../../../core/interfaces';
 
 @Component({
   selector: 'app-file-box',

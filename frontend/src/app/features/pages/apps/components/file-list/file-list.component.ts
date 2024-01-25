@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IFileList } from '../../../../../../core/interfaces';
+import { IFileList } from '../../../../../core/interfaces';
 
 @Component({
   selector: 'app-file-list',

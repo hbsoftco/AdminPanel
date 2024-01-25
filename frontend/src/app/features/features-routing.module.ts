@@ -36,6 +36,14 @@ const routes: Routes = [
         (m) => m.AppsModule
       ),
   },
+  {
+    path: 'to-do-list',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./pages/todo-list/todo-list.module').then(
+        (m) => m.TodoListModule
+      ),
+  },
 ]
 
 @NgModule({

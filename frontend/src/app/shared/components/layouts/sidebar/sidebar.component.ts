@@ -84,7 +84,15 @@ export class SidebarComponent {
           isSelected: false,
           routerLink: '/apps'
         },
-        // { title: '', items: [], isOpen: false, iconSrc: '/assets/icons/.svg', isSelected: false, routerLink: '' },
+        {
+          title: 'Todo List',
+          items: [],
+          isOpen: false,
+          iconSrc: 'layer.svg',
+          iconSelectedSrc: 'layer-s.svg',
+          isSelected: false,
+          routerLink: '/to-do-list'
+        },
         // {
         //   title: 'Users', items: [
         //     { title: 'Add', isSelected: false, routerLink: '/users/new' },
