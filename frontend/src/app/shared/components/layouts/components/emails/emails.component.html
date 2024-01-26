@@ -12,10 +12,29 @@
                     <span class="text-sm cursor-pointer">Mark all as read</span>
                 </header>
                 <content>
-                    
+                    <div *ngFor="let item of items; let i = index"
+                        class="flex justify-between items-center p-3 duration-200 transition-all hover:bg-gray-50 border-b cursor-pointer">
+                        <div class="flex items-center">
+                            <img [src]="'/assets/images/avatars/'+item.icon" class="w-10 h-10 mr-2 rounded-full" alt="notification icon" />
+                            <div>
+                                <h5 class="text-[15px] font-headingFontFamily font-semibold">{{item.title}}
+                                </h5>
+                                <div class="flex items-center text-[13px] text-gray-400">
+                                    <i class="pi pi-clock mr-1"></i>
+                                    <span>{{item.date}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cursor-pointer text-primary-900 duration-200 transition-all hover:text-red mr-1">
+                            <i class="pi pi-times"></i>
+                        </div>
+                    </div>
                 </content>
                 <footer>
-                    <p class="text-center text-primary-500 p-3 text-sm">View All</p>
+                    <p class="text-center text-primary-500 p-3 text-sm flex items-center justify-center cursor-pointer">
+                        <span class="mr-1">View All</span>
+                        <img src="/assets/icons/arrow-right-3.svg" class="w-4 h-4" alt="arrow-right">
+                    </p>
                 </footer>
             </div>
         </ng-template>

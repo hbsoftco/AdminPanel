@@ -1,0 +1,11 @@
+.fixed {
+    @apply top-0 shadow-xl;
+    position: fixed;
+    width: calc(100% - 292px);
+    transition: 0.2s linear;
+}
+
+.no-fixed {
+    @apply static top-[-50px];
+    transition: 0.2s linear;
+}
