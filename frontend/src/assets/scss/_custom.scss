@@ -38,3 +38,7 @@ strong {
     @apply rounded-full text-primary-700 font-bold text-xl;
 }
 
+
+.sidebar {
+    @apply fixed top-0 left-0 h-full w-[260px] shadow-sm;
+}
