@@ -38,7 +38,44 @@ strong {
     @apply rounded-full text-primary-700 font-bold text-xl;
 }
 
+.collapsed-sidebar {
+    @apply fixed top-0 left-0 h-full w-20 shadow-sm;
+
+    .logo-wrapper {
+        @apply flex items-center justify-center p-3 bg-white;
+    }
+
+    .logo-text {
+        @apply hidden;
+    }
+
+    .menu-container {
+
+        &_top-nav {
+            @apply hidden;
+        }
+
+        &_item {
+
+            .menu-text {
+                @apply hidden;
+            }
+        }
+    }
+}
 
 .sidebar {
     @apply fixed top-0 left-0 h-full w-[260px] shadow-sm;
+
+    .logo-wrapper {
+        @apply flex items-center py-4 px-4 bg-white;
+    }
+}
+
+.body {
+    @apply ltr:ml-[260px];
+}
+
+.big-body {
+    @apply ltr:ml-20;
 }

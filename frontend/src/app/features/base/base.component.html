@@ -1,7 +1,7 @@
 <div class="">
-    <app-sidebar></app-sidebar>
-    <div class="ltr:ml-[260px] bg-[#f5f5f5]">
-        <app-top-nav></app-top-nav>
+    <app-sidebar [sidebarClass]="sidebarClass"></app-sidebar>
+    <div class="bg-[#f5f5f5]" [class]="bodyClass">
+        <app-top-nav (onToggleSideNav)="onToggleSideNav($event)"></app-top-nav>
         <div class="">
             <router-outlet></router-outlet>
         </div>

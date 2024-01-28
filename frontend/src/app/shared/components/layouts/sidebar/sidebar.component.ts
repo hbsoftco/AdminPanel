@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DropDownAnimation } from './sidebar.animation';
 
 // interface MenuItem {
@@ -23,6 +23,8 @@ import { DropDownAnimation } from './sidebar.animation';
   animations: [DropDownAnimation]
 })
 export class SidebarComponent {
+  @Input() sidebarClass: string = 'sidebar';
+
   isOpen = false;
 
   menuItems: any[] = [
@@ -88,8 +90,8 @@ export class SidebarComponent {
           title: 'Todo List',
           items: [],
           isOpen: false,
-          iconSrc: 'layer.svg',
-          iconSelectedSrc: 'layer-s.svg',
+          iconSrc: 'todo-list.svg',
+          iconSelectedSrc: 'todo-list.svg',
           isSelected: false,
           routerLink: '/to-do-list'
         },
