@@ -91,18 +91,30 @@ export class SidebarComponent {
           items: [],
           isOpen: false,
           iconSrc: 'todo-list.svg',
-          iconSelectedSrc: 'todo-list.svg',
+          iconSelectedSrc: 'todo-list-s.svg',
           isSelected: false,
           routerLink: '/to-do-list'
         },
+        // {
+        //   title: 'Calendar',
+        //   items: [],
+        //   isOpen: false,
+        //   iconSrc: 'todo-list.svg',
+        //   iconSelectedSrc: 'todo-list.svg',
+        //   isSelected: false,
+        //   routerLink: '/calendar'
+        // },
         {
-          title: 'Calendar',
-          items: [],
+          title: 'Email', items: [
+            { title: 'Inbox', isSelected: false, routerLink: '/email/inbox' },
+            { title: 'Compose', isSelected: false, routerLink: '/email/compose' },
+            { title: 'Read Email', isSelected: false, routerLink: '/email/read-email' },
+          ],
           isOpen: false,
-          iconSrc: 'todo-list.svg',
-          iconSelectedSrc: 'todo-list.svg',
+          iconSrc: 'sms.svg',
+          iconSelectedSrc: 'sms.svg',
           isSelected: false,
-          routerLink: '/calendar'
+          routerLink: '/email'
         },
         // {
         //   title: 'Users', items: [

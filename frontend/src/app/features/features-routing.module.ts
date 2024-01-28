@@ -45,13 +45,21 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'calendar',
+    path: 'email',
     component: BaseComponent,
     loadChildren: () =>
-      import('./pages/app-calendar/app-calendar.module').then(
-        (m) => m.AppCalendarModule
+      import('./pages/email/email.module').then(
+        (m) => m.EmailModule
       ),
   },
+  // {
+  //   path: 'calendar',
+  //   component: BaseComponent,
+  //   loadChildren: () =>
+  //     import('./pages/app-calendar/app-calendar.module').then(
+  //       (m) => m.AppCalendarModule
+  //     ),
+  // },
 ]
 
 @NgModule({
