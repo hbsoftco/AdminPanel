@@ -79,3 +79,7 @@ strong {
 .big-body {
     @apply ltr:ml-20;
 }
+
+.email-active-link {
+    @apply text-primary-500;
+}

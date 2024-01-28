@@ -1,1 +1,35 @@
-<p>email works!</p>
+<div class="grid grid-cols-12 gap-4 mx-4 mb-4">
+    <div class="col-span-12 xl:col-span-3">
+        <app-card padding="p-5">
+            <div class="ml-2">
+                <div class="text-left">
+                    <c-button>
+                        <i class="ml-4 pi pi-pencil text-xs mr-2"></i>
+                        <span class="text-sm mr-6">Compose</span>
+                    </c-button>
+                </div>
+                <div class="my-5">
+                    <div *ngFor="let item of menus; let i = index">
+                        <h6 class="text-sm font-normal text-gray-400 my-2">{{item.categoryName}}</h6>
+                        <ul>
+                            <li *ngFor="let menu of item.items;">
+                                <a routerLinkActive="email-active-link" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="menu.link" class="text-primary-900 flex justify-between items-center font-semibold text-[15px] py-2 pr-4">
+                                    <div class="flex items-center">
+                                        <span class="pr-2 pi text-sm text-gray-400" [class]="menu.icon"></span>
+                                        <span class="">{{menu.text}}</span>
+                                    </div>
+                                    <span *ngIf="menu.tag" [class]="menu.tagType">({{menu.tag}})</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </app-card>
+    </div>
+    <div class="col-span-12 xl:col-span-9">
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
