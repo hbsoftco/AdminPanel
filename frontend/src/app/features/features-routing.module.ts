@@ -44,6 +44,14 @@ const routes: Routes = [
         (m) => m.TodoListModule
       ),
   },
+  {
+    path: 'calendar',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./pages/app-calendar/app-calendar.module').then(
+        (m) => m.AppCalendarModule
+      ),
+  },
 ]
 
 @NgModule({

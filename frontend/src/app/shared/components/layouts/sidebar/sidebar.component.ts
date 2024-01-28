@@ -95,6 +95,15 @@ export class SidebarComponent {
           isSelected: false,
           routerLink: '/to-do-list'
         },
+        {
+          title: 'Calendar',
+          items: [],
+          isOpen: false,
+          iconSrc: 'todo-list.svg',
+          iconSelectedSrc: 'todo-list.svg',
+          isSelected: false,
+          routerLink: '/calendar'
+        },
         // {
         //   title: 'Users', items: [
         //     { title: 'Add', isSelected: false, routerLink: '/users/new' },
