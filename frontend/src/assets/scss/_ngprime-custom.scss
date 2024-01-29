@@ -269,6 +269,35 @@
     }
 }
 
+
+.p-scrollpanel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.p-scrollpanel:hover .p-scrollpanel-bar,
+.p-scrollpanel:active .p-scrollpanel-bar {
+    @apply opacity-100;
+}
+
+.p-scrollpanel .p-scrollpanel-bar {
+    @apply bg-gray-300 border-none w-1.5;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.p-scrollpanel .p-scrollpanel-bar:focus-visible {
+    @apply outline-none outline-0 outline-offset-0;
+}
+
+.p-scrollpanel-bar {
+    @apply rounded-xl cursor-pointer relative opacity-0;
+    background: #c1c1c1;
+    transition: opacity .25s linear;
+}
+
 // //////////////////////////
 
 

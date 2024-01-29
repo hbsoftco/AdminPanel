@@ -1,1 +1,159 @@
-<p>chat works!</p>
+<div class="mx-4 mb-4">
+    <div class="grid grid-cols-12 gap-4 mb-4">
+        <div class="col-span-12 xl:col-span-3">
+            <app-card>
+                <div>
+                    <h4 class="text-lg font-headingFontFamily font-bold text-primary-900 mb-4">Messages</h4>
+                    <div class="relative mb-4">
+                        <input type="text"
+                            class="py-2.5 pl-10 w-full text-sm outline-none font-normal bg-gray-100 border-none rounded-full"
+                            placeholder="Search here ...">
+                        <button type="button"
+                            class="absolute w-9 h-9 inset-0 ltr:right-auto rtl:left-auto appearance-none peer-focus:text-primary flex justify-center items-center">
+                            <img class="w-5 h-5 relative top-0.5 left-0.5" src="/assets/icons/search-line.svg"
+                                alt="Search Icon">
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p-scrollPanel [style]="{ width: '100%', height: 'calc(100vh - 320px)' }">
+                        <div *ngFor="let item of messagesList; let i = index">
+                            <div class="my-3">
+                                <span class="text-sm mr-1 text-gray-400 w-4 h-4" [class]="item.category.icon"></span>
+                                <span class="text-sm text-gray-400">{{item.category.name}}</span>
+                            </div>
+                            <div class="flex justify-between items-center chat-user" *ngFor="let user of item.items;">
+                                <div class="flex items-center">
+                                    <div class="relative">
+                                        <img class="w-[45px] h-[45px] mr-2 rounded-full"
+                                            [src]="'/assets/images/avatars/'+user.avatar" [alt]="user.name">
+                                        <div *ngIf="user.status"
+                                            class="w-3 h-3 rounded-full absolute right-2 border-white border-2 -bottom-0.5"
+                                            [ngClass]="user.status==='online'?'bg-green':'bg-red' "></div>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-primary-900 font-headingFontFamily text-[15px] chat-user__name font-semibold">
+                                            {{user.name}}
+                                        </p>
+                                        <p class="text-green text-sm" *ngIf="user.isTyping">Typing...</p>
+                                        <p *ngIf="user.lastMsg.me" class="text-sm text-gray-400">{{user.lastMsg.me}}</p>
+                                        <p *ngIf="user.lastMsg.user" class="text-sm text-gray-500">{{user.lastMsg.user}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <p class="text-gray-400 text-[13px] mb-1">{{user.time}}</p>
+                                    <div class="w-[18px] h-[18px] rounded-full bg-primary-500 flex justify-center items-center text-white text-xs font-normal"
+                                        *ngIf="user.newMessageCount">
+                                        {{user.newMessageCount }}
+                                    </div>
+                                    <div *ngIf="user.readStatus === 'read'">
+                                        <img class="w-4 h-4" src="/assets/icons/check-double-line.svg"
+                                            alt="check-double-line">
+                                    </div>
+                                    <div *ngIf="user.readStatus === 'notRead'">
+                                        <img class="w-4 h-4" src="/assets/icons/tick.svg" alt="tick">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </p-scrollPanel>
+                </div>
+            </app-card>
+        </div>
+        <div class="col-span-12 xl:col-span-9">
+            <app-card padding="p-5">
+                <div class="border border-gray-100 rounded-lg">
+                    <div class="border-b border-gray-100 flex justify-between items-center">
+                        <div class="flex items-center p-4">
+                            <div class="relative">
+                                <img class="w-12 h-12 mr-2 rounded-full" src="/assets/images/avatars/user11.jpg">
+                            </div>
+                            <div>
+                                <p
+                                    class="mb-1 text-primary-900 font-headingFontFamily text-[15px] chat-user__name font-semibold">
+                                    Laurent Perrier
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="block w-2.5 h-2.5 rounded-full bg-primary-500 mr-2"></span>
+                                    <span class="text-sm text-gray-400">Active now</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center px-4">
+                            <c-button [rounded]="true" icon="pi-video"></c-button>
+                            <c-button [rounded]="true" icon="pi-phone" class="mx-1.5"></c-button>
+                            <c-button [rounded]="true" icon="pi-ellipsis-v"></c-button>
+                        </div>
+                    </div>
+                    <!-- Header -->
+                    <div class="p-4 chat-box">
+                        <div *ngFor="let item of chatData; let i = index" class="mb-6">
+                            <div class="flex items-start" *ngIf="!item.me">
+                                <div class="text-center">
+                                    <img class="flex-1 w-12 h-12 mr-2 rounded-full m-auto" [src]="item.avatar">
+                                    <span class="text-gray-300 text-sm">{{item.time}}</span>
+                                </div>
+                                <div>
+                                    <div *ngFor="let message of item.messages;">
+                                        <div
+                                            class="bg-gray-100 rounded-2xl inline-block max-w-[80%] rounded-tl-none p-4 mb-1 text-[15px]">
+                                            <p class="text-primary-900">
+                                                {{message.text}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Left -->
+
+                            <div class="flex items-start" *ngIf="item.me" dir="rtl">
+                                <div class="text-center">
+                                    <img class="flex-1 w-12 h-12 ml-2 rounded-full m-auto" [src]="item.avatar">
+                                    <span class="text-gray-300 text-sm">{{item.time}}</span>
+                                </div>
+                                <div>
+                                    <div *ngFor="let message of item.messages;">
+                                        <div dir="ltr"
+                                            class="bg-primary-500 rounded-2xl inline-block max-w-[80%] rounded-tr-none p-4 mb-1 text-[15px]">
+                                            <p class="text-white">
+                                                {{message.text}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right -->
+                        </div>
+                    </div>
+                    <!-- Body -->
+                    <div class="bg-gray-100 flex items-center justify-between h-20 px-5">
+                        <div class="flex items-center ml-1">
+                            <button
+                                class="flex justify-between items-center w-11 h-11 rounded-full hover:bg-gray-200 duration-200 transition-all">
+                                <img class="w-6 h-6 m-auto" src="/assets/icons/smile.svg" alt="smile">
+                            </button>
+                            <button
+                                class="flex justify-between items-center w-11 h-11 rounded-full hover:bg-gray-200 duration-200 transition-all">
+                                <img class="w-5 h-5 m-auto" src="/assets/icons/link.svg" alt="link">
+                            </button>
+                        </div>
+                        <div class="flex-1 mx-4">
+                            <input type="text" class="p-4 w-full rounded-full outline-none text-primary-900"
+                                placeholder="Type Something ...">
+                        </div>
+                        <div class="mr-4">
+                            <button>
+                                <img class="w-8 h-8 m-auto" src="/assets/icons/send.svg" alt="send">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                </div>
+            </app-card>
+        </div>
+    </div>
+</div>

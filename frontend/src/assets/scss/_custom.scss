@@ -39,7 +39,7 @@ strong {
 }
 
 .primary-btn-icon-rounded {
-    @apply rounded-full text-primary-700 font-bold text-xl;
+    @apply rounded-full text-primary-900 font-bold w-10 h-10 bg-gray-100 duration-200 transition-all hover:bg-gray-200 text-sm;
 }
 
 .btn-icon-semi-rounded {

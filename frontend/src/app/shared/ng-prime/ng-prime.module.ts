@@ -14,6 +14,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TooltipModule } from 'primeng/tooltip';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 
 const MODULES = [
   ChartModule,
@@ -28,7 +29,8 @@ const MODULES = [
   PanelMenuModule,
   CheckboxModule,
   TooltipModule,
-  OverlayPanelModule
+  OverlayPanelModule,
+  ScrollPanelModule
 ];
 
 @NgModule({

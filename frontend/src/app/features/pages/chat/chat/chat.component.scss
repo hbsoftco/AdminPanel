@@ -1,0 +1,16 @@
+.chat-user {
+    @apply cursor-pointer py-4 duration-200 transition-all hover:bg-gray-50 px-2 rounded-md;
+
+    &:not(:last-child) {
+        @apply border-b border-gray-50;
+    }
+
+    &__name {
+        @apply font-headingFontFamily;
+    }
+}
+
+.chat-box {
+    @apply overflow-y-scroll;
+    height: calc(100vh - 367px);
+}

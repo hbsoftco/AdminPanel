@@ -34,7 +34,7 @@ export class ButtonComponent implements OnInit {
       finalClass += " primary-btn-icon-rounded"
     }
 
-    if (this.icon && this.severity === "") {
+    if (this.icon && this.severity === "" && !this.rounded) {
       finalClass += " btn-icon-semi-rounded"
     }
 
