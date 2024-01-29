@@ -13,8 +13,18 @@ import { NotificationComponent } from './layouts/components/notification/notific
 import { UserProfileComponent } from './layouts/components/user-profile/user-profile.component';
 import { ChangeLangComponent } from './layouts/components/change-lang/change-lang.component';
 import { EmailsComponent } from './layouts/components/emails/emails.component';
+import { MemberGridComponent } from './member-grid/member-grid.component';
+import { MemberGrid2Component } from './member-grid2/member-grid2.component';
 
-const COMPONENTS = [TopNavComponent, SidebarComponent, CardComponent, ButtonComponent, FooterComponent];
+const COMPONENTS = [
+  TopNavComponent,
+  SidebarComponent,
+  CardComponent,
+  ButtonComponent,
+  FooterComponent,
+  MemberGridComponent,
+  MemberGrid2Component,
+];
 
 @NgModule({
   declarations: [
@@ -23,6 +33,7 @@ const COMPONENTS = [TopNavComponent, SidebarComponent, CardComponent, ButtonComp
     UserProfileComponent,
     ChangeLangComponent,
     EmailsComponent,
+
   ],
   imports: [
     NgPrimeModule,

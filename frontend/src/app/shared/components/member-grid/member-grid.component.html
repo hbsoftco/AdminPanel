@@ -1,0 +1,34 @@
+<app-card>
+    <div>
+        <div>
+            <img class="w-36 h-36 m-auto rounded-full" [src]="member?.avatar" [alt]="member?.name">
+        </div>
+
+        <div class="text-center mt-4 mb-6">
+            <h3 class="font-headingFontFamily text-lg text-primary-900 font-semibold">{{member?.name}}</h3>
+            <h5 class="text-gray-400 text-[15px]">{{member?.userName}}</h5>
+        </div>
+
+        <div class="flex justify-center mb-6">
+            <c-button label="Message" class="mx-1.5">
+            </c-button>
+            <c-button label="Projects" class="mx-1.5" severity="secondary">
+            </c-button>
+        </div>
+
+        <div class="flex justify-between items-center text-center">
+            <div>
+                <p class="text-gray-400 text-[15px] font-medium mb-1">Post</p>
+                <p class="text-primary-500 text-xl font-medium">{{member?.postCount}}</p>
+            </div>
+            <div>
+                <p class="text-gray-400 text-[15px] font-medium mb-1">Followers</p>
+                <p class="text-primary-500 text-xl font-medium">{{member?.followers}}</p>
+            </div>
+            <div>
+                <p class="text-gray-400 text-[15px] font-medium mb-1">Followings</p>
+                <p class="text-primary-500 text-xl font-medium">{{member?.following}}</p>
+            </div>
+        </div>
+    </div>
+</app-card>

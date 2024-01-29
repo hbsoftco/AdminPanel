@@ -1,1 +1,7 @@
-<p>members-grid works!</p>
+<div class="mx-4 mb-4">
+    <div class="grid grid-cols-12 gap-4 mb-4">
+        <div class="col-span-12 xl:col-span-3" *ngFor="let member of members; let i = index">
+            <app-member-grid [member]="member"></app-member-grid>
+        </div>
+    </div>
+</div>
