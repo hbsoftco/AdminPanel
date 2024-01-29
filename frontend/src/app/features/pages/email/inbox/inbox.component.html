@@ -1,1 +1,43 @@
-<p>inbox works!</p>
+<div class="mb-4">
+    <div class="grid grid-cols-12 gap-4 mb-4">
+        <div class="col-span-12 xl:col-span-12">
+            <app-card>
+                <div class="flex justify-between items-center mb-4">
+                    <h4 class="text-primary-900 font-headingFontFamily font-bold text-lg">Emails List</h4>
+                </div>
+                <div>
+                    <p-table [value]="mails" [paginator]="true" [rows]="20" [tableStyle]="{ 'min-width': '50rem' }"
+                        [rowsPerPageOptions]="[20, 25]" styleClass="p-datatable-striped custom-table"
+                        [tableStyle]="{'min-width': '50rem'}">
+                        <ng-template pTemplate="body" let-mail>
+                            <tr>
+                                <td>
+                                    <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
+                                </td>
+                                <td>
+                                    <div class="mx-4">
+                                        <span class="pi" [ngClass]="mail.star? 'pi-star-fill' : 'pi-star'"></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex justify-start">
+                                        {{mail.names}}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex justify-start items-center">
+                                        <a routerLink="/email/read-email"
+                                            class="font-semibold font-headingFontFamily ml-2 hover:text-primary-900 duration-200 transition-all text-sm">
+                                            {{mail.title}}
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>{{mail.date}}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </app-card>
+        </div>
+    </div>
+</div>
