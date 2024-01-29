@@ -44,26 +44,6 @@ export class SidebarComponent {
           isSelected: false,
           routerLink: '/dashboard'
         },
-        // {
-        //   title: 'Users',
-        //   items: [],
-        //   isOpen: false,
-        //   iconSrc: 'dash.svg',
-        //   iconSelectedSrc: 'dash-s.svg',
-        //   isSelected: false,
-        //   routerLink: '/hossein'
-        // },
-        // {
-        //   title: 'Users', items: [
-        //     { title: 'Add', isSelected: false, routerLink: '/users/users/new' },
-        //     { title: 'List', isSelected: false, routerLink: '/users/list' },
-        //   ],
-        //   isOpen: false,
-        //   iconSrc: 'users.svg',
-        //   iconSelectedSrc: 'users-s.svg',
-        //   isSelected: false,
-        //   routerLink: '/users'
-        // },
       ]
     },
     {
@@ -116,12 +96,15 @@ export class SidebarComponent {
           isSelected: false,
           routerLink: '/email'
         },
-        // {
-        //   title: 'Users', items: [
-        //     { title: 'Add', isSelected: false, routerLink: '/users/new' },
-        //     { title: 'List', isSelected: false, routerLink: '/users' },
-        //   ], isOpen: false, iconSrc: '/assets/icons/users.svg', isSelected: false, routerLink: ''
-        // },
+        {
+          title: 'Chat',
+          items: [],
+          isOpen: false,
+          iconSrc: 'chat.svg',
+          iconSelectedSrc: 'chat.svg',
+          isSelected: false,
+          routerLink: '/chat'
+        },
       ]
     },
   ];

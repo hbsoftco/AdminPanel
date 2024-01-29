@@ -52,6 +52,14 @@ const routes: Routes = [
         (m) => m.EmailModule
       ),
   },
+  {
+    path: 'chat',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./pages/chat/chat.module').then(
+        (m) => m.ChatModule
+      ),
+  },
   // {
   //   path: 'calendar',
   //   component: BaseComponent,
