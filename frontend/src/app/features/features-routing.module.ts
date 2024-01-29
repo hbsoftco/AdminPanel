@@ -60,6 +60,14 @@ const routes: Routes = [
         (m) => m.ChatModule
       ),
   },
+  {
+    path: 'contact',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./pages/contact/contact.module').then(
+        (m) => m.ContactModule
+      ),
+  },
   // {
   //   path: 'calendar',
   //   component: BaseComponent,

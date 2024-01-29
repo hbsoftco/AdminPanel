@@ -107,6 +107,24 @@ export class SidebarComponent {
         },
       ]
     },
+    {
+      category: 'PAGES',
+      menus: [
+        {
+          title: 'Contact List', items: [
+            { title: 'Members Grid', isSelected: false, routerLink: '/contact/members-grid' },
+            { title: 'Members Grid 2', isSelected: false, routerLink: '/contact/members-grid-2' },
+            { title: 'Members List', isSelected: false, routerLink: '/contact/members-list' },
+            { title: 'Member Profile', isSelected: false, routerLink: '/contact/member-profile' },
+          ],
+          isOpen: false,
+          iconSrc: 'call-calling.svg',
+          iconSelectedSrc: 'call-calling-s.svg',
+          isSelected: false,
+          routerLink: '/contact'
+        },
+      ]
+    },
   ];
 
   toggleSubMenu(menu: any) {
