@@ -1,0 +1,15 @@
+.mail-container {
+    @apply text-primary-800;
+
+    p {
+        @apply mb-4 text-[15px];
+    }
+
+    ol {
+        @apply pl-12;
+
+        li {
+            @apply list-decimal mb-2 pl-2;
+        }
+    }
+}

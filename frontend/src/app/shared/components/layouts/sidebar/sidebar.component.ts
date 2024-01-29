@@ -112,7 +112,7 @@ export class SidebarComponent {
           ],
           isOpen: false,
           iconSrc: 'sms.svg',
-          iconSelectedSrc: 'sms.svg',
+          iconSelectedSrc: 'sms-s.svg',
           isSelected: false,
           routerLink: '/email'
         },

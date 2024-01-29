@@ -4,6 +4,13 @@
             <app-card>
                 <div class="flex justify-between items-center mb-4">
                     <h4 class="text-primary-900 font-headingFontFamily font-bold text-lg">Emails List</h4>
+                    <div class="flex justify-between items-center">
+                        <c-button icon="pi-print" class="mx-1"></c-button>
+                        <c-button icon="pi-info-circle" class="mx-1"></c-button>
+                        <c-button icon="pi-trash" class="mx-1"></c-button>
+                        <c-button icon="pi-copy" class="mx-1"></c-button>
+                        <c-button icon="pi-ellipsis-v" class="mx-1"></c-button>
+                    </div>
                 </div>
                 <div>
                     <p-table [value]="mails" [paginator]="true" [rows]="20" [tableStyle]="{ 'min-width': '50rem' }"
@@ -16,7 +23,7 @@
                                 </td>
                                 <td>
                                     <div class="mx-4">
-                                        <span class="pi" [ngClass]="mail.star? 'pi-star-fill' : 'pi-star'"></span>
+                                        <span class="pi" [ngClass]="mail.star? 'pi-star-fill text-yellow-400' : 'pi-star'"></span>
                                     </div>
                                 </td>
                                 <td>
