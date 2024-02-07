@@ -101,7 +101,7 @@ export class RecentOrdersComponent {
       {
         id: 8,
         orderId: '#SK251',
-        product: 'Tagus Airpod x-Zon',
+        product: 'hbsoft Airpod x-Zon',
         image: 'product8.jpg',
         customer: 'Lucas Oliver',
         price: 543.54,
@@ -153,7 +153,7 @@ export class RecentOrdersComponent {
         image: 'product12.jpg',
         customer: 'Sophia Charlotte',
         price: 199.21,
-        vendor: 'Tagus',
+        vendor: 'hbsoft',
         date: '12-12-2022',
         status: 'Delivered',
         rating: '5.0 (15 Votes)',

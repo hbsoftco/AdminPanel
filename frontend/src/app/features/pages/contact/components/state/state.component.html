@@ -1,0 +1,14 @@
+<app-card padding="p-4">
+    <div class="group" (mouseover)="changeIcon('w')" (mouseout)="changeIcon('s')">
+        <div class="flex justify-start items-center">
+            <div
+                class="mr-4 flex items-center justify-center bg-primary-50 duration-200 transition-all group-hover:bg-primary-500 w-16 h-16 rounded-md">
+                <img class="w-10 h-10" [src]="'/assets/icons/'+icon+'-'+hoveredIcon+'.svg'" [alt]="icon">
+            </div>
+            <div>
+                <h5 class="text-[15px] mb-1 text-primary-700">{{title}}</h5>
+                <h3 class="font-fontFamily font-bold text-2xl text-primary-900 mb-2">{{value}}</h3>
+            </div>
+        </div>
+    </div>
+</app-card>

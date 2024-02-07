@@ -10,22 +10,22 @@ export class ActivityTimelineComponent {
   items: MenuItem[] | undefined;
   activities: any = [
     {
-      title:'8 Invoices have been paid',
-      description:'Invoices have been paid to the company hbsoft.',
-      icon:'pdf.png',
-      date:'02:14 PM Today',
+      title: '8 Invoices have been paid',
+      description: 'Invoices have been paid to the company hbsoft.',
+      icon: 'pdf.png',
+      date: '02:14 PM Today',
     },
     {
-      title:'Create a project for client',
-      description:'Allow users to like products in hbsoft.',
-      icon:'avatar.png',
-      date:'11:47 PM Wednesday',
+      title: 'Create a project for client',
+      description: 'Allow users to like products in hbsoft.',
+      icon: 'avatar.png',
+      date: '11:47 PM Wednesday',
     },
     {
-      title:'Added new style collection',
-      description:'Product uploaded by hbsoft Technology Email.',
-      icon:'t-shirt.png',
-      date:'18 March 2023',
+      title: 'Added new style collection',
+      description: 'Product uploaded by hbsoft Technology Email.',
+      icon: 't-shirt.png',
+      date: '18 March 2023',
     },
   ]
 

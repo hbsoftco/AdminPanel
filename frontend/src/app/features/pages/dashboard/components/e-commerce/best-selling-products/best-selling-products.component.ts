@@ -14,7 +14,7 @@ export class BestSellingProductsComponent {
     this.products = [
       {
         id: 'A3652',
-        product: 'Tagus Airpod x-Zon',
+        product: 'hbsoft Airpod x-Zon',
         image: 'product8.jpg',
         price: 289.50,
         count: '450 (550)',

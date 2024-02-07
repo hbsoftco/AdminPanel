@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input() padding: string = "p-7"
+  @Input() bg: string = "bg-white"
 }
