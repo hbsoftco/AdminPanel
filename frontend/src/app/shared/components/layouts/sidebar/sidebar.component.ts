@@ -123,6 +123,17 @@ export class SidebarComponent {
           isSelected: false,
           routerLink: '/contact'
         },
+        {
+          title: 'Invoice', items: [
+            { title: 'Invoice List', isSelected: false, routerLink: '/invoice/list' },
+            { title: 'Invoice Detail', isSelected: false, routerLink: '/contact/detail' },
+          ],
+          isOpen: false,
+          iconSrc: 'printer.svg',
+          iconSelectedSrc: 'printer-s.svg',
+          isSelected: false,
+          routerLink: '/invoice'
+        },
       ]
     },
   ];

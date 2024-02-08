@@ -68,6 +68,14 @@ const routes: Routes = [
         (m) => m.ContactModule
       ),
   },
+  {
+    path: 'invoice',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./pages/invoice/invoice.module').then(
+        (m) => m.InvoiceModule
+      ),
+  },
   // {
   //   path: 'calendar',
   //   component: BaseComponent,
